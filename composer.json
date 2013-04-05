@@ -1,0 +1,13 @@
+{
+    "name": "sugiphp/sugi",
+    "type": "library",
+    "require": {
+        "sugiphp/config": "dev-master",
+        "sugiphp/database": "dev-master",
+        "sugiphp/cache": "dev-master",
+        "sugiphp/events": "dev-master",
+        "monolog/monolog": "1.4.*",
+        "symfony/yaml": "2.2.*"
+    },
+    "minimum-stability": "dev"
+}
