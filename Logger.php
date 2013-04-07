@@ -2,13 +2,12 @@
 
 namespace SugiPHP\Sugi;
 
-use \Monolog\Logger as Monolog;
+use \SugiPHP\Logger\Logger as SugiLogger;
 use \Monolog\Handler\StreamHandler;
+use \Psr\Log\InvalidArgumentException;
 
 class Logger
 {
-	public static $ip = "";
-
 	protected static $monolog;
 
 	/**
@@ -23,6 +22,13 @@ class Logger
 		$instance = static::getInstance();
 
 		return call_user_func_array(array($instance, $method), $parameters);
+	}
+
+	public static function log($message, $customLevel)
+	{
+		$instance = static::getInstance();
+
+		$instance->log($customLevel, $message);
 	}
 
 	public static function getInstance()
@@ -40,20 +46,6 @@ class Logger
 				)
 			);
 			//static::$monolog = static::factory(array());
-
-			// TODO: this should be in \Request or something...
-			if (!static::$ip) {
-				if (PHP_SAPI == "cli") {
-					static::$ip = "cli"; // The request was started from the command line
-				} elseif (isset($_SERVER["HTTP_X_FORWARDED_FOR"])) {
-					static::$ip = $_SERVER["HTTP_X_FORWARDED_FOR"]; // If the server is behind proxy
-				} elseif (isset($_SERVER["HTTP_CLIENT_IP"])) {
-					static::$ip = $_SERVER["HTTP_CLIENT_IP"];
-				} elseif (isset($_SERVER["REMOTE_ADDR"])) {
-					static::$ip = $_SERVER["REMOTE_ADDR"];
-				}
-			}
-
 		}
 		
 		return static::$monolog;
@@ -61,9 +53,19 @@ class Logger
 
 	public static function factory(array $params)
 	{
-		$monolog = new Monolog(isset($params["name"]) ? $params["name"] : "sugi");
+		$monolog = new SugiLogger();
 		$monolog->pushProcessor(function ($message) {
-			$message["extra"]["ip"] = static::$ip;
+			// TODO: this should be in \Request or something...
+			if (PHP_SAPI == "cli") {
+				$ip = "cli"; // The request was started from the command line
+			} elseif (isset($_SERVER["HTTP_X_FORWARDED_FOR"])) {
+				$ip = $_SERVER["HTTP_X_FORWARDED_FOR"]; // If the server is behind proxy
+			} elseif (isset($_SERVER["HTTP_CLIENT_IP"])) {
+				$ip = $_SERVER["HTTP_CLIENT_IP"];
+			} elseif (isset($_SERVER["REMOTE_ADDR"])) {
+				$ip = $_SERVER["REMOTE_ADDR"];
+			}
+			$message["extra"]["ip"] = $ip;
 
 			return $message;
 		});
@@ -107,7 +109,7 @@ class Logger
 
 		// cretate a handler
 		if ($type == "file") {
-			$handler = new StreamHandler($config["filename"], Monolog::DEBUG);
+			$handler = new StreamHandler($config["filename"]);
 			$handler->setFormatter(new Formatter\LineFormatter($format));
 		}
 

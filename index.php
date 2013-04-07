@@ -13,7 +13,7 @@ $loader->add("SugiPHP\\Sugi", "../../");
 
 // LOGGER
 // $log = Logger::getInstance();
-Logger::log("sys", "test me");
+Logger::log("test me", "nsbop");
 
 // EVENTS
 Event::listen("sugi.database.post_open", function ($e) {
