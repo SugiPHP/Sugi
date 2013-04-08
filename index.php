@@ -7,13 +7,12 @@ use \SugiPHP\Sugi\Logger;
 $loader = include "vendor/autoload.php";
 $loader->add("SugiPHP\\Sugi", "../../");
 
-
 // CONFIG
 // Config::$path = "config".DIRECTORY_SEPARATOR;
 
 // LOGGER
 // $log = Logger::getInstance();
-Logger::log("test me", "nsbop");
+Logger::log("nsbop", "someone's testing");
 
 // EVENTS
 Event::listen("sugi.database.post_open", function ($e) {
@@ -22,7 +21,6 @@ Event::listen("sugi.database.post_open", function ($e) {
 
 Event::listen("sugi.database.pre_query", function ($e) {
 	Logger::debug($e["query"]);
-	echo ($e["query"]."<br />");
 });
 
 // DATABASE
@@ -34,10 +32,11 @@ $sqlite->query("CREATE table testtt(id integer not null);");
 $sqlite->query("INSERT into testtt values (3);");
 var_dump($sqlite->all("SELECT * FROM testtt"));
 
-
 // CACHE
 
 // SESSION
 
 // ROUTER
 
+// this will be emailed
+// Logger::emergency("Some error occured when connecting to the database");

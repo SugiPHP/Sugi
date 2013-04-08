@@ -4,6 +4,8 @@ namespace SugiPHP\Sugi;
 
 use \SugiPHP\Logger\Logger as SugiLogger;
 use \Monolog\Handler\StreamHandler;
+use \Monolog\Handler\FirePHPHandler;
+use \Monolog\Handler\NativeMailerHandler;
 use \Psr\Log\InvalidArgumentException;
 
 class Logger
@@ -24,31 +26,33 @@ class Logger
 		return call_user_func_array(array($instance, $method), $parameters);
 	}
 
-	public static function log($message, $customLevel)
-	{
-		$instance = static::getInstance();
-
-		$instance->log($customLevel, $message);
-	}
-
 	public static function getInstance()
 	{
 		if (!static::$monolog) {
-			static::$monolog = static::factory(
-				array(
-					// "name"     => "", // default is empty string
-					"type"     => "file",
-					"filename" => "log/custom-".date("Ymd").".log",
-					// "filter"   => "all", // default is "all"
-					"filter"   => "none +curl +nsbop",
-					"filter"   => "all -debug",
-					// "format"   => "[{Y}-{m}-{d} {H}:{i}:{s}] [{ip}] [{level}] {message}", // default
-				)
-			);
-			//static::$monolog = static::factory(array());
+			static::$monolog = static::factory(Config::get("logger"));
 		}
 		
 		return static::$monolog;
+	}
+
+	/**
+	 * Extending log method, since it might be in an old format
+	 * 
+	 * @param  string $level
+	 * @param  string $message
+	 */
+	public static function log($level, $message)
+	{
+		$instance = static::getInstance();
+
+		// for historical reasons parameters were in reverse order. We'll try to fix them
+		// if the level has a white space and the message has not we'll assume that they
+		// are in old order format.
+		if ((strpos($level, " ") > 0) and (strpos($message, " ") === false)) {
+			$instance->log($message, $level);
+		} else {
+			$instance->log($level, $message);
+		}
 	}
 
 	public static function factory(array $params)
@@ -69,15 +73,16 @@ class Logger
 
 			return $message;
 		});
-
 		if (isset($params["type"])) {
 			$handler = static::createHandler($params);
-			$monolog->pushHandler($handler);
+			$filter = (isset($params["filter"])) ? $params["filter"] : "all";
+			$monolog->addHandler($handler, $filter);
 		}
 		else {
 			foreach ($params as $param) {
 				$handler = static::createHandler($param);
-				$monolog->pushHandler($handler);
+				$filter = (isset($param["filter"])) ? $param["filter"] : "all";
+				$monolog->addHandler($handler, $filter);
 			}
 		}
 
@@ -86,31 +91,35 @@ class Logger
 
 	protected static function createHandler(array $config)
 	{
-		// handler type (file, mail, stdout...)
+		// handler type (file, mail, stdout, console...)
 		if ($type = $config["type"]) {
 			unset($config["type"]);
 		} else {
 			throw new \Exception("Logger type must be set");
 		}
 
-		// filter
-		if ($filter = isset($config["filter"])) {
-			unset($config["filter"]);
-		} else {
-			$filter = "all";
-		}
-		 
-		// format
-		if ($format = isset($config["format"])) {
-			unset($config["format"]);
-		} else {
-			$format = null;
-		}
-
-		// cretate a handler
+		// create a handler
 		if ($type == "file") {
 			$handler = new StreamHandler($config["filename"]);
-			$handler->setFormatter(new Formatter\LineFormatter($format));
+			// format
+			$format = isset($config["format"]) ? $config["format"] : null;
+			$handler->setFormatter(new Logger\Formatter\LineFormatter($format));
+		} elseif ($type == "firephp") {
+			$handler = new FirePHPHandler();
+		} elseif ($type == "stdout") {
+			$handler = new StreamHandler("php://stdout");
+			// format
+			$format = isset($config["format"]) ? $config["format"] : null;
+			$handler->setFormatter(new Logger\Formatter\LineFormatter($format));
+		} elseif ($type == "mail") {
+			// to, from , subject
+			$to = $config["to"];
+			$subject = isset($config["subject"]) ? $config["subject"] : "Logger Message";
+			$from = isset($config["from"]) ? $config["from"] : $_SERVER["SERVER_ADMIN"];
+			$handler = new NativeMailerHandler($to, $subject, $from);
+			// format
+			$format = isset($config["format"]) ? $config["format"] : null;
+			$handler->setFormatter(new Logger\Formatter\LineFormatter($format));
 		}
 
 		return $handler;

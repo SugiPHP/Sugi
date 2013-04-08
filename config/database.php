@@ -7,8 +7,8 @@ return array(
 	"type" => "mysql",
 	"mysql" => array(
 		"database" => "test",
-		// "host" => "127.0.0.1",
-		// "user" => "test",
+		"host" => "127.0.0.1",
+		"user" => "test",
 		// "pass" => "test",
 	),
 	"pgsql" => array(

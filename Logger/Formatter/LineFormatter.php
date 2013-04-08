@@ -1,6 +1,6 @@
 <?php
 
-namespace SugiPHP\Sugi\Formatter;
+namespace SugiPHP\Sugi\Logger\Formatter;
 
 class LineFormatter extends \Monolog\Formatter\NormalizerFormatter
 {
@@ -16,6 +16,7 @@ class LineFormatter extends \Monolog\Formatter\NormalizerFormatter
 	public function __construct($format = null, $dateFormat = null)
 	{
 		$this->format = $format ?: static::SIMPLE_FORMAT;
+
 		// old date format
 		$this->format = str_replace("{Y}-{m}-{d} {H}:{i}:{s}", "{datetime}", $this->format);
 		$this->format = str_replace("{level}", "{level_name}", $this->format);
@@ -40,9 +41,6 @@ class LineFormatter extends \Monolog\Formatter\NormalizerFormatter
 				unset($vars["extra"][$var]);
 			}
 		}
-
-		// old scool
-		$vars["level_name"] = strtolower($vars["level_name"]);
 
 		foreach ($vars as $var => $val) {
 			$output = str_replace("{".$var."}", $this->convertToString($val), $output);
