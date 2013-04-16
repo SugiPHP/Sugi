@@ -5,27 +5,24 @@ use \SugiPHP\Sugi\Config;
 use \SugiPHP\Sugi\Event;
 use \SugiPHP\Sugi\Logger;
 use \SugiPHP\Sugi\Cache;
+use \SugiPHP\Sugi\Router;
+use \SugiPHP\HTTP\Request;
 
 // CONFIG
 // LOGGER
 // EVENTS
 // DATABASE
 // CACHE
-// TODO: SESSION
+// 	ROUTER
 
-// TODO: ROUTER
-
-// TODO: ASSETS
-
-// TODO: I18N
-
-// TODO: CRON
-
-// TODO: IMAGE PROCESSING
-
-// TODO: STOPWATCH
-
-
+// TODO: 
+// 	ASSETS
+// 	IMAGE PROCESSING - Imagine
+// 	CRON
+// 	I18N
+// 	FILTER
+// 	SESSION
+// 	STOPWATCH
 
 
 $loader = include "vendor/autoload.php";
@@ -68,7 +65,19 @@ $sqlite->query("CREATE table testtt(id integer not null);");
 $sqlite->query("INSERT into testtt values (3);");
 var_dump($sqlite->all("SELECT * FROM testtt"));
 
-
-
 // this will be emailed
 // Logger::emergency("Some error occured when connecting to the database");
+
+
+Router::add("mvc", "/{controller}/{action}/{param}", array("controller" => "home", "action" => "index", "param" => ""), array(), function($route) {
+	var_dump($route);
+});
+
+$requests = array("/", "/show/123", "/user/login", "/path/too/long/to/work");
+foreach($requests as $request) {
+	if (Router::match(Request::custom($request))) {
+		echo "<h2>".Router::getName()."</h2>";
+	} else {
+		echo "<h2>404<h2>";
+	}
+}

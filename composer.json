@@ -7,6 +7,8 @@
         "sugiphp/cache": "dev-master",
         "sugiphp/events": "dev-master",
         "sugiphp/logger": "dev-master",
+        "sugiphp/http": "dev-master",
+        "sugiphp/routing": "dev-master",
         "symfony/yaml": "2.2.*"
     },
     "minimum-stability": "dev"
