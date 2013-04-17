@@ -114,16 +114,42 @@ class Router
 		return static::$match;
 	}
 
+	/**
+	 * Returns all request variables.
+	 * 
+	 * @return array
+	 */
+	public static function getParams()
+	{
+		return static::$match;
+	}
+
+	/**
+	 * Returns variable that matches current route.
+	 * 
+	 * @param  string $param Parameter (variable) name
+	 * @return mixed
+	 */
 	public static function getParam($param)
 	{
 		return isset(static::$match[$param]) ? static::$match[$param] : null;
 	}
 
+	/**
+	 * Returns current route.
+	 * 
+	 * @return \SugiPHP\Routing\Route
+	 */
 	public static function getRoute()
 	{
 		return static::getParam("_route");
 	}
 
+	/**
+	 * Returns the name of the current route.
+	 * 
+	 * @return string
+	 */
 	public static function getName()
 	{
 		return static::getParam("_name");
