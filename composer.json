@@ -1,7 +1,14 @@
 {
     "name": "sugiphp/sugi",
     "type": "library",
+    "authors": [
+        {
+            "name": "Plamen Popov",
+            "email": "tzappa@gmail.com"
+        }
+    ],
     "require": {
+        "php": ">=5.3",
         "sugiphp/config": "dev-master",
         "sugiphp/database": "dev-master",
         "sugiphp/cache": "dev-master",

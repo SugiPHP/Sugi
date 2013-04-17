@@ -45,13 +45,15 @@ class Router
 		if (!static::$router) {
 			static::$router = new BaseRouter();
 			$routes = Config::get("routes");
-			foreach ($routes as $name => $route) {
-			 	static::add(
-			 		$name, 
-			 		$route["path"], 
-			 		isset($route["defaults"]) ? $route["defaults"] : array(), 
-			 		isset($route["requisites"]) ? $route["requisites"] : array()
-			 	);
+			if ($routes) {
+				foreach ($routes as $name => $route) {
+					static::add(
+						$name, 
+						$route["path"], 
+						isset($route["defaults"]) ? $route["defaults"] : array(), 
+						isset($route["requisites"]) ? $route["requisites"] : array()
+					);
+				}
 			}
 		}
 		
@@ -112,6 +114,18 @@ class Router
 		}
 
 		return static::$match;
+	}
+
+	/**
+	 * Builds an URL based on route with name $name.
+	 * 
+	 * @param  string $name
+	 * @param  array  $params
+	 * @return string
+	 */
+	public static function build($name, array $params)
+	{
+		return static::$router->get($name)->build($params);
 	}
 
 	/**
