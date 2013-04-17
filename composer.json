@@ -11,5 +11,11 @@
         "sugiphp/routing": "dev-master",
         "symfony/yaml": "2.2.*"
     },
+    "autoload": {
+        "psr-0": { 
+            "SugiPHP\\Sugi\\": ""
+        }
+    },
+    "target-dir": "SugiPHP/Sugi",
     "minimum-stability": "dev"
 }
