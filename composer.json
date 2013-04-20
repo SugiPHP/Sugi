@@ -16,11 +16,13 @@
         "sugiphp/logger": "dev-master",
         "sugiphp/http": "dev-master",
         "sugiphp/routing": "dev-master",
-        "symfony/yaml": "2.2.*"
+        "sugiphp/assets": "dev-master",
+        "symfony/yaml": "2.2.*",
+        "leafo/lessphp": "dev-master"
     },
     "autoload": {
         "psr-0": { 
-            "SugiPHP\\Sugi\\": ""
+            "SugiPHP\\Sugi\\": "src"
         }
     },
     "target-dir": "SugiPHP/Sugi",

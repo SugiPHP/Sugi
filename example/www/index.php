@@ -1,12 +1,24 @@
 <?php
 
+namespace App;
+
 use \SugiPHP\Sugi\Database;
 use \SugiPHP\Sugi\Config;
 use \SugiPHP\Sugi\Event;
 use \SugiPHP\Sugi\Logger;
 use \SugiPHP\Sugi\Cache;
 use \SugiPHP\Sugi\Router;
+use \SugiPHP\Sugi\CSS;
+use \SugiPHP\Sugi\JS;
 use \SugiPHP\HTTP\Request;
+
+define("DS", DIRECTORY_SEPARATOR);
+
+define("WWWPATH", __DIR__.DS);
+define("BASEPATH", dirname(__DIR__).DS);
+define("APPPATH", dirname(__DIR__).DS."app".DS);
+
+include "../../vendor/autoload.php";
 
 // CONFIG
 // LOGGER
@@ -14,9 +26,9 @@ use \SugiPHP\HTTP\Request;
 // DATABASE
 // CACHE
 // ROUTER
+// ASSETS
 
 // TODO: 
-// 	ASSETS
 // 	IMAGE PROCESSING - Imagine
 // 	CRON
 // 	I18N
@@ -24,12 +36,8 @@ use \SugiPHP\HTTP\Request;
 // 	SESSION
 // 	STOPWATCH
 
-
-$loader = include "vendor/autoload.php";
-$loader->add("SugiPHP\\Sugi", "../../");
-
 // CONFIG
-// Config::$path = "config".DIRECTORY_SEPARATOR;
+Config::$path = APPPATH."config".DS;
 
 // LOGGER
 // $log = Logger::getInstance();
@@ -44,6 +52,11 @@ Event::listen("sugi.database.post_open", function ($e) {
 Event::listen("sugi.database.pre_query", function ($e) {
 	Logger::debug($e["query"]);
 });
+
+CSS::add("test.css");
+
+// echo "<style>" . CSS::pack(false) . "</style>";
+echo '<link rel="stylesheet" href="css/'.CSS::pack().'" />';
 
 // DATABASE
 // Database::$registerEvents = Config::get("database.registerEvents", true);

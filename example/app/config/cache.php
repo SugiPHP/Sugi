@@ -2,5 +2,4 @@
 
 return array(
 	"store" => "apc",
-	
 );

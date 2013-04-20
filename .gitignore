@@ -1,4 +1,6 @@
 vendor/
 composer.lock
-log/
-
+example/log/
+example/www/css/
+example/www/js/
+example/tmp/

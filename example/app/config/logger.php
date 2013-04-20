@@ -7,7 +7,7 @@
 return array(
 	array(
 		"type"     => "file",
-		"filename" => "log/custom-".date("Ymd").".log",
+		"filename" => BASEPATH."log/custom-".date("Ymd").".log",
 		// "filter"   => "all", // default is "all"
 		"filter"   => "all -debug",
 		// "format"   => "[{Y}-{m}-{d} {H}:{i}:{s}] [{ip}] [{level}] {message}", // default
