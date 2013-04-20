@@ -25,6 +25,6 @@
             "SugiPHP\\Sugi\\": "src"
         }
     },
-    "target-dir": "SugiPHP/Sugi",
+    "target-dir": "src",
     "minimum-stability": "dev"
 }
