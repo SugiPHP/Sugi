@@ -6,9 +6,9 @@
  * @license    http://opensource.org/licenses/mit-license.php (MIT License)
  */
 
-namespace SugiPHP\Sugi;
+namespace Sugi;
 
-use SugiPHP\Config\Config as SugiPHPConfig;
+use SugiPHP\Config\Config as BaseConfig;
 use SugiPHP\Config\FileLocator;
 use SugiPHP\Config\NativeLoader;
 use SugiPHP\Config\YamlLoader;
@@ -49,7 +49,7 @@ class Config
 			$fileLocator = new FileLocator(static::$path);
 			$nativeLoader = new NativeLoader($fileLocator);
 			$yamlLoader = new YamlLoader($fileLocator);
-			static::$config = new SugiPHPConfig(array($nativeLoader, $yamlLoader));
+			static::$config = new BaseConfig(array($nativeLoader, $yamlLoader));
 		}
 
 		return static::$config;

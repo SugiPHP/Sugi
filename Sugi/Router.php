@@ -6,7 +6,7 @@
  * @license    http://opensource.org/licenses/mit-license.php (MIT License)
  */
 
-namespace SugiPHP\Sugi;
+namespace Sugi;
 
 use SugiPHP\Routing\Router as BaseRouter;
 use SugiPHP\Routing\Route;

@@ -1,8 +1,14 @@
 <?php
+/**
+ * @package    SugiPHP
+ * @subpackage Sugi
+ * @author     Plamen Popov <tzappa@gmail.com>
+ * @license    http://opensource.org/licenses/mit-license.php (MIT License)
+ */
 
-namespace SugiPHP\Sugi;
+namespace Sugi;
 
-use \SugiPHP\Logger\Logger as SugiLogger;
+use \SugiPHP\Logger\Logger as BaseLogger;
 use \Monolog\Handler\StreamHandler;
 use \Monolog\Handler\FirePHPHandler;
 use \Monolog\Handler\NativeMailerHandler;
@@ -57,7 +63,7 @@ class Logger
 
 	public static function factory(array $params)
 	{
-		$monolog = new SugiLogger();
+		$monolog = new BaseLogger();
 		$monolog->pushProcessor(function ($message) {
 			// TODO: this should be in \Request or something...
 			if (PHP_SAPI == "cli") {

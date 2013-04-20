@@ -2,15 +2,15 @@
 
 namespace App;
 
-use \SugiPHP\Sugi\Database;
-use \SugiPHP\Sugi\Config;
-use \SugiPHP\Sugi\Event;
-use \SugiPHP\Sugi\Logger;
-use \SugiPHP\Sugi\Cache;
-use \SugiPHP\Sugi\Router;
-use \SugiPHP\Sugi\CSS;
-use \SugiPHP\Sugi\JS;
-use \SugiPHP\HTTP\Request;
+use Sugi\Config;
+use Sugi\Logger;
+use Sugi\Event;
+use Sugi\CSS;
+use Sugi\JS;
+use Sugi\Cache;
+use Sugi\Database;
+use Sugi\Router;
+use SugiPHP\HTTP\Request;
 
 define("DS", DIRECTORY_SEPARATOR);
 

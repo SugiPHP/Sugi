@@ -6,9 +6,9 @@
  * @license    http://opensource.org/licenses/mit-license.php (MIT License)
  */
 
-namespace SugiPHP\Sugi;
+namespace Sugi;
 
-use SugiPHP\Events\Event as SugiPHPEvent;
+use SugiPHP\Events\Event as BaseEvent;
 use SugiPHP\Events\Dispatcher;
 
 class Event extends Dispatcher
@@ -50,6 +50,6 @@ class Event extends Dispatcher
 	public static function fire($eventName, array $params = array())
 	{
 		$instance = static::getInstance();
-		$instance->dispatch(new SugiPHPEvent($eventName, $params));
+		$instance->dispatch(new BaseEvent($eventName, $params));
 	}
 }
