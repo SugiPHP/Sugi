@@ -17,14 +17,14 @@
         "sugiphp/http": "dev-master",
         "sugiphp/routing": "dev-master",
         "sugiphp/assets": "dev-master",
+        "sugiphp/filesystem": "dev-master",
         "symfony/yaml": "2.2.*",
         "leafo/lessphp": "dev-master"
     },
     "autoload": {
         "psr-0": { 
-            "Sugi": ""
+            "Sugi\\": "src/"
         }
     },
-    "target-dir": "Sugi",
     "minimum-stability": "dev"
 }

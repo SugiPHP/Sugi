@@ -3,7 +3,6 @@
  * Logger configuration
  */
 
-
 return array(
 	array(
 		"type"     => "file",

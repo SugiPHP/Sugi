@@ -1,4 +1,10 @@
 <?php
+/**
+ * Base entrance point
+ * 
+ * @package    SugiPHP
+ * @subpackage Sugi
+ */
 
 namespace App;
 
@@ -7,16 +13,22 @@ use Sugi\Logger;
 use Sugi\Event;
 use Sugi\CSS;
 use Sugi\JS;
+use Sugi\File;
 use Sugi\Cache;
 use Sugi\Database;
 use Sugi\Router;
 use SugiPHP\HTTP\Request;
 
+// start a timer
+define("APPLICATION_START", microtime(true));
+
+// shortcut
 define("DS", DIRECTORY_SEPARATOR);
 
-define("WWWPATH", __DIR__.DS);
-define("BASEPATH", dirname(__DIR__).DS);
-define("APPPATH", dirname(__DIR__).DS."app".DS);
+// Defining Working Directories
+define("WWWPATH", __DIR__ . DS); // Document Root path (usually same as $_SERVER["DOCUMENT_ROOT"]);
+define("BASEPATH", dirname(__DIR__) . DS); // Application Root path
+define("APPPATH", dirname(__DIR__).DS."app".DS); // Application path
 
 include "../../vendor/autoload.php";
 
@@ -29,11 +41,12 @@ include "../../vendor/autoload.php";
 // ASSETS
 
 // TODO: 
+//  FILES
+// 	FILTER
+// 	SESSION
 // 	IMAGE PROCESSING - Imagine
 // 	CRON
 // 	I18N
-// 	FILTER
-// 	SESSION
 // 	STOPWATCH
 
 // CONFIG
@@ -53,6 +66,9 @@ Event::listen("sugi.database.pre_query", function ($e) {
 	Logger::debug($e["query"]);
 });
 
+if (!File::exists(APPPATH."assets/test.css")) {
+	throw \Exception("assets file test.css does not exists");
+}
 CSS::add("test.css");
 
 // echo "<style>" . CSS::pack(false) . "</style>";
