@@ -1,6 +1,6 @@
 <?php
 
-use Sugi\Config;
+use SugiPHP\Sugi\Config;
 
 return array(
 	// "registerEvents" => false,

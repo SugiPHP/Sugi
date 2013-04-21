@@ -6,7 +6,7 @@
  * @license    http://opensource.org/licenses/mit-license.php (MIT License)
  */
 
-namespace Sugi;
+namespace SugiPHP\Sugi;
 
 use \SugiPHP\Logger\Logger as BaseLogger;
 use \Monolog\Handler\StreamHandler;

@@ -6,21 +6,21 @@
  * @license    http://opensource.org/licenses/mit-license.php (MIT License)
  */
 
-namespace Sugi;
+namespace SugiPHP\Sugi;
 
-use SugiPHP\FileSystem\Files as BaseFile;
+use SugiPHP\Assets\JsPacker;
 
 /**
- * Facades SugiPHP\FileSystem\Files
+ * Facades SugiPHP\Assets\JsPacker
  */
-class File
+class JS
 {
 	/**
-	 * Instance of SugiPHP\FileSystem\Files
+	 * Instance of SugiPHP\Assets\JsPacker
 	 * 
-	 * @var SugiPHP\FileSystem\Files
+	 * @var SugiPHP\Assets\JsPacker
 	 */
-	protected static $file;
+	protected static $jsPacker;
 
 	/**
 	 * Handles dynamic static calls to the object.
@@ -37,14 +37,14 @@ class File
 	}
 
 	/**
-	 * Returns the singleton instance of the Files class
+	 * Returns the singleton instance of the JsPacker class
 	 */
 	public static function getInstance()
 	{
-		if (!static::$file) {
-			static::$file = new BaseFile();
+		if (!static::$jsPacker) {
+			static::$jsPacker = new JsPacker(Config::get("js"));
 		}
 
-		return static::$file;
+		return static::$jsPacker;
 	}
 }

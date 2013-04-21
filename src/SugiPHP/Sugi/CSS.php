@@ -6,21 +6,21 @@
  * @license    http://opensource.org/licenses/mit-license.php (MIT License)
  */
 
-namespace Sugi;
+namespace SugiPHP\Sugi;
 
-use SugiPHP\Assets\JsPacker;
+use SugiPHP\Assets\CssPacker;
 
 /**
- * Facades SugiPHP\Assets\JsPacker
+ * Facades SugiPHP\Assets\CssPacker
  */
-class JS
+class CSS
 {
 	/**
-	 * Instance of SugiPHP\Assets\JsPacker
+	 * Instance of SugiPHP\Assets\CssPacker
 	 * 
-	 * @var SugiPHP\Assets\JsPacker
+	 * @var SugiPHP\Assets\CssPacker
 	 */
-	protected static $jsPacker;
+	protected static $cssPacker;
 
 	/**
 	 * Handles dynamic static calls to the object.
@@ -37,14 +37,14 @@ class JS
 	}
 
 	/**
-	 * Returns the singleton instance of the JsPacker class
+	 * Returns the singleton instance of the CssPacker class
 	 */
 	public static function getInstance()
 	{
-		if (!static::$jsPacker) {
-			static::$jsPacker = new JsPacker(Config::get("js"));
+		if (!static::$cssPacker) {
+			static::$cssPacker = new CssPacker(Config::get("css"));
 		}
 
-		return static::$jsPacker;
+		return static::$cssPacker;
 	}
 }

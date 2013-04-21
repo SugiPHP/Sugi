@@ -6,21 +6,21 @@
  * @license    http://opensource.org/licenses/mit-license.php (MIT License)
  */
 
-namespace Sugi;
+namespace SugiPHP\Sugi;
 
-use SugiPHP\Assets\CssPacker;
+use SugiPHP\FileSystem\Files as BaseFile;
 
 /**
- * Facades SugiPHP\Assets\CssPacker
+ * Facades SugiPHP\FileSystem\Files
  */
-class CSS
+class File
 {
 	/**
-	 * Instance of SugiPHP\Assets\CssPacker
+	 * Instance of SugiPHP\FileSystem\Files
 	 * 
-	 * @var SugiPHP\Assets\CssPacker
+	 * @var SugiPHP\FileSystem\Files
 	 */
-	protected static $cssPacker;
+	protected static $file;
 
 	/**
 	 * Handles dynamic static calls to the object.
@@ -37,14 +37,14 @@ class CSS
 	}
 
 	/**
-	 * Returns the singleton instance of the CssPacker class
+	 * Returns the singleton instance of the Files class
 	 */
 	public static function getInstance()
 	{
-		if (!static::$cssPacker) {
-			static::$cssPacker = new CssPacker(Config::get("css"));
+		if (!static::$file) {
+			static::$file = new BaseFile();
 		}
 
-		return static::$cssPacker;
+		return static::$file;
 	}
 }

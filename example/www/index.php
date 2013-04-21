@@ -8,15 +8,15 @@
 
 namespace App;
 
-use Sugi\Config;
-use Sugi\Logger;
-use Sugi\Event;
-use Sugi\CSS;
-use Sugi\JS;
-use Sugi\File;
-use Sugi\Cache;
-use Sugi\Database;
-use Sugi\Router;
+use SugiPHP\Sugi\Config;
+use SugiPHP\Sugi\Logger;
+use SugiPHP\Sugi\Event;
+use SugiPHP\Sugi\CSS;
+use SugiPHP\Sugi\JS;
+use SugiPHP\Sugi\File;
+use SugiPHP\Sugi\Cache;
+use SugiPHP\Sugi\Database;
+use SugiPHP\Sugi\Router;
 use SugiPHP\HTTP\Request;
 
 // start a timer

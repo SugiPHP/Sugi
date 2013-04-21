@@ -6,7 +6,7 @@
  * @license    http://opensource.org/licenses/mit-license.php (MIT License)
  */
 
-namespace Sugi;
+namespace SugiPHP\Sugi;
 
 use SugiPHP\Events\Event as BaseEvent;
 use SugiPHP\Events\Dispatcher;

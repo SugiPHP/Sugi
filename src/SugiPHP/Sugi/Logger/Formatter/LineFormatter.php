@@ -1,6 +1,6 @@
 <?php
 
-namespace Sugi\Logger\Formatter;
+namespace SugiPHP\Sugi\Logger\Formatter;
 
 class LineFormatter extends \Monolog\Formatter\NormalizerFormatter
 {
