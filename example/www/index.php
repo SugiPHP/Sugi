@@ -39,9 +39,10 @@ include "../../vendor/autoload.php";
 // CACHE
 // ROUTER
 // ASSETS
+// FILE
 
-// TODO: 
-//  FILES
+// TODO:
+//  DIR 
 // 	FILTER
 // 	SESSION
 // 	IMAGE PROCESSING - Imagine
@@ -66,6 +67,7 @@ Event::listen("sugi.database.pre_query", function ($e) {
 	Logger::debug($e["query"]);
 });
 
+// ASSETS
 if (!File::exists(APPPATH."assets/test.css")) {
 	throw \Exception("assets file test.css does not exists");
 }
@@ -73,6 +75,8 @@ CSS::add("test.css");
 
 // echo "<style>" . CSS::pack(false) . "</style>";
 echo '<link rel="stylesheet" href="css/'.CSS::pack().'" />';
+
+JS::add("timer.js");
 
 // DATABASE
 // Database::$registerEvents = Config::get("database.registerEvents", true);
@@ -110,3 +114,7 @@ foreach($requests as $request) {
 		echo "<h2>404<h2>";
 	}
 }
+
+$timer = microtime(true) - APPLICATION_START;
+echo "<script>\nvar timer = $timer;\n" . JS::pack(false) . "</script>";
+
