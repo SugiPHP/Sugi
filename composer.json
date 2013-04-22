@@ -10,10 +10,10 @@
     "require": {
         "php": ">=5.3",
         "sugiphp/config": "dev-master",
-        "sugiphp/database": "dev-master",
         "sugiphp/cache": "dev-master",
-        "sugiphp/events": "dev-master",
         "sugiphp/logger": "dev-master",
+        "sugiphp/database": "dev-master",
+        "sugiphp/events": "dev-master",
         "sugiphp/http": "dev-master",
         "sugiphp/routing": "dev-master",
         "sugiphp/assets": "dev-master",
@@ -26,5 +26,6 @@
             "SugiPHP\\Sugi\\": "src/"
         }
     },
+    "target-dir": "SugiPHP/Sugi",
     "minimum-stability": "dev"
 }
