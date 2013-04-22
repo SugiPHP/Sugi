@@ -23,9 +23,9 @@
     },
     "autoload": {
         "psr-0": { 
-            "SugiPHP\\Sugi\\": "src/"
+            "SugiPHP\\Sugi\\": ""
         }
     },
-    "target-dir": "src",
+    "target-dir": "SugiPHP/Sugi",
     "minimum-stability": "dev"
 }
