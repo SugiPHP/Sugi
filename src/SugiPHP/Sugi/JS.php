@@ -8,19 +8,19 @@
 
 namespace SugiPHP\Sugi;
 
-use SugiPHP\Assets\CssPacker;
+use SugiPHP\Assets\JsPacker;
 
 /**
- * Facades SugiPHP\Assets\CssPacker
+ * Facades SugiPHP\Assets\JsPacker
  */
-class CSS
+class JS
 {
 	/**
-	 * Instance of SugiPHP\Assets\CssPacker
+	 * Instance of SugiPHP\Assets\JsPacker
 	 * 
-	 * @var SugiPHP\Assets\CssPacker
+	 * @var SugiPHP\Assets\JsPacker
 	 */
-	protected static $cssPacker;
+	protected static $jsPacker;
 
 	/**
 	 * Handles dynamic static calls to the object.
@@ -37,14 +37,19 @@ class CSS
 	}
 
 	/**
-	 * Returns the singleton instance of the CssPacker class
+	 * Returns the singleton instance of the JsPacker class
 	 */
 	public static function getInstance()
 	{
-		if (!static::$cssPacker) {
-			static::$cssPacker = new CssPacker(Config::get("css"));
+		if (!static::$jsPacker) {
+			static::$jsPacker = static::factory(Config::get("js"));
 		}
 
-		return static::$cssPacker;
+		return static::$jsPacker;
+	}
+
+	public static function factory(array $config)
+	{
+		return new JsPacker($config);
 	}
 }
