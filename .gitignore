@@ -1,5 +1,4 @@
 vendor/
-composer.lock
 example/log/
 example/www/css/
 example/www/js/
