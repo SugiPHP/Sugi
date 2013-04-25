@@ -1,4 +1,10 @@
 <?php
+/**
+ * @package    SugiPHP
+ * @subpackage Sugi
+ * @author     Plamen Popov <tzappa@gmail.com>
+ * @license    http://opensource.org/licenses/mit-license.php (MIT License)
+ */
 
 namespace SugiPHP\Sugi;
 

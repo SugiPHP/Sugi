@@ -105,7 +105,6 @@ var_dump($sqlite->all("SELECT * FROM testtt"));
 // this will be emailed
 // Logger::emergency("Some error occured when connecting to the database");
 
-
 Router::add("mvc", "/{controller}/{action}/{param}", array("controller" => "home", "action" => "index", "param" => ""), array(), function($route) {
 	var_dump($route);
 });
@@ -121,4 +120,3 @@ foreach($requests as $request) {
 
 $timer = microtime(true) - APPLICATION_START;
 echo "<script>\nvar timer = $timer;\n" . JS::dump() . "</script>";
-
