@@ -103,6 +103,9 @@ class Router
 		static::$match = $router->match($request->getPath(), $request->getMethod(), $request->getHost(), $request->getScheme());
 
 		if (static::$match !== false) {
+			// Fire an event
+			Event::fire("sugi.router.match", static::$match);
+
 			$name = static::getName();
 			if (isset(static::$callables[$name])) {
 				$callable = static::$callables[$name];
