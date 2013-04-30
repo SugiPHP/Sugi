@@ -10,7 +10,6 @@ namespace SugiPHP\Sugi;
 
 use SugiPHP\Routing\Router as BaseRouter;
 use SugiPHP\Routing\Route;
-use SugiPHP\HTTP\Request;
 
 class Router
 {
@@ -96,13 +95,13 @@ class Router
 
 		// default request is current request
 		if (is_null($request)) {
-			$request = Request::real();
+			$request = Request::getInstance();
 		}
 
 		// match first route that matches the request
 		static::$match = $router->match($request->getPath(), $request->getMethod(), $request->getHost(), $request->getScheme());
 
-		if (static::$match !== false) {
+		if (static::$match) {
 			// Fire an event
 			Event::fire("sugi.router.match", static::$match);
 
@@ -114,6 +113,9 @@ class Router
 					$callable(static::$match);
 				}
 			}
+		} else {
+			// Fire a No Match event
+			Event::fire("sugi.router.nomatch");
 		}
 
 		return static::$match;
