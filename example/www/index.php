@@ -17,6 +17,7 @@ use SugiPHP\Sugi\File;
 use SugiPHP\Sugi\Cache;
 use SugiPHP\Sugi\Database;
 use SugiPHP\Sugi\Router;
+use SugiPHP\Sugi\PDO;
 use SugiPHP\HTTP\Request;
 
 // start a timer
@@ -56,6 +57,12 @@ Config::$path = APPPATH."config".DS;
 // LOGGER
 // $log = Logger::getInstance();
 Logger::log("nsbop", "someone's testing");
+
+// PDO
+$db = PDO::getInstance();
+foreach ($db->query("SHOW tables") as $row) {
+	var_dump($row);
+}
 
 // EVENTS
 Event::listen("sugi.database.post_open", function ($e) {
