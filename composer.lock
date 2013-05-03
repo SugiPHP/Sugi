@@ -1,0 +1,851 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+    ],
+    "hash": "f15b1e32ce33537c531c2f288763bc35",
+    "packages": [
+        {
+            "name": "kriswallsmith/assetic",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kriswallsmith/assetic.git",
+                "reference": "0a55a9ba70bd9250899ad77deceaf8cb9e145371"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kriswallsmith/assetic/zipball/0a55a9ba70bd9250899ad77deceaf8cb9e145371",
+                "reference": "0a55a9ba70bd9250899ad77deceaf8cb9e145371",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.1",
+                "symfony/process": ">=2.1,<3.0"
+            },
+            "require-dev": {
+                "cssmin/cssmin": "*",
+                "joliclic/javascript-packer": "*",
+                "kamicane/packager": "*",
+                "leafo/lessphp": "*",
+                "leafo/scssphp": "*",
+                "leafo/scssphp-compass": "*",
+                "mrclay/minify": "*",
+                "phpunit/phpunit": "3.7.*",
+                "ptachoire/cssembed": "*",
+                "twig/twig": ">=1.6.0,<2.0"
+            },
+            "suggest": {
+                "leafo/lessphp": "Assetic provides the integration with the lessphp LESS compiler",
+                "leafo/scssphp": "Assetic provides the integration with the scssphp SCSS compiler",
+                "leafo/scssphp-compass": "Assetic provides the integration with the SCSS compass plugin",
+                "ptachoire/cssembed": "Assetic provides the integration with phpcssembed to embed data uris",
+                "twig/twig": "Assetic provides the integration with the Twig templating engine"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Assetic": "src/"
+                },
+                "files": [
+                    "src/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kris Wallsmith",
+                    "email": "kris.wallsmith@gmail.com",
+                    "homepage": "http://kriswallsmith.net/"
+                }
+            ],
+            "description": "Asset Management for PHP",
+            "homepage": "https://github.com/kriswallsmith/assetic",
+            "keywords": [
+                "assets",
+                "compression",
+                "minification"
+            ],
+            "time": "2013-04-02 21:36:28"
+        },
+        {
+            "name": "leafo/lessphp",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/leafo/lessphp.git",
+                "reference": "51aad6ef903bdcb18280ae81fb85016a078232a0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/leafo/lessphp/zipball/51aad6ef903bdcb18280ae81fb85016a078232a0",
+                "reference": "51aad6ef903bdcb18280ae81fb85016a078232a0",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.3-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "lessc.inc.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT",
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Leaf Corcoran",
+                    "email": "leafot@gmail.com",
+                    "homepage": "http://leafo.net"
+                }
+            ],
+            "description": "lessphp is a compiler for LESS written in PHP.",
+            "homepage": "http://leafo.net/lessphp/",
+            "time": "2013-04-09 01:25:49"
+        },
+        {
+            "name": "monolog/monolog",
+            "version": "1.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Seldaek/monolog.git",
+                "reference": "1.4.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/1.4.1",
+                "reference": "1.4.1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "psr/log": ">=1.0,<2.0"
+            },
+            "require-dev": {
+                "doctrine/couchdb": "dev-master",
+                "mlehner/gelf-php": "1.0.*",
+                "raven/raven": "0.3.*"
+            },
+            "suggest": {
+                "doctrine/couchdb": "Allow sending log messages to a CouchDB server",
+                "ext-amqp": "Allow sending log messages to an AMQP server (1.0+ required)",
+                "ext-mongo": "Allow sending log messages to a MongoDB server",
+                "mlehner/gelf-php": "Allow sending log messages to a GrayLog2 server",
+                "raven/raven": "Allow sending log messages to a Sentry server"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.4.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Monolog": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jordi Boggiano",
+                    "email": "j.boggiano@seld.be",
+                    "homepage": "http://seld.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Sends your logs to files, sockets, inboxes, databases and various web services",
+            "homepage": "http://github.com/Seldaek/monolog",
+            "keywords": [
+                "log",
+                "logging",
+                "psr-3"
+            ],
+            "time": "2013-04-01 10:04:58"
+        },
+        {
+            "name": "natxet/CssMin",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/natxet/CssMin.git",
+                "reference": "9801e2a0de7ae252ca4f2b85542d75a82047a8b4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/natxet/CssMin/zipball/9801e2a0de7ae252ca4f2b85542d75a82047a8b4",
+                "reference": "9801e2a0de7ae252ca4f2b85542d75a82047a8b4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "CssMin": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Joe Scylla",
+                    "email": "joe.scylla@gmail.com",
+                    "homepage": "https://profiles.google.com/joe.scylla"
+                }
+            ],
+            "description": "Minifying CSS",
+            "homepage": "http://code.google.com/p/cssmin/",
+            "keywords": [
+                "css",
+                "minify"
+            ],
+            "time": "2013-03-15 18:47:32"
+        },
+        {
+            "name": "psr/log",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/log",
+                "reference": "1.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/php-fig/log/archive/1.0.0.zip",
+                "reference": "1.0.0",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Psr\\Log\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for logging libraries",
+            "keywords": [
+                "log",
+                "psr",
+                "psr-3"
+            ],
+            "time": "2012-12-21 11:40:51"
+        },
+        {
+            "name": "sugiphp/assets",
+            "version": "dev-master",
+            "target-dir": "SugiPHP/Assets",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SugiPHP/Assets.git",
+                "reference": "5e77df6c9f689e6e8fbe8eae9796ab14a126f44d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SugiPHP/Assets/zipball/5e77df6c9f689e6e8fbe8eae9796ab14a126f44d",
+                "reference": "5e77df6c9f689e6e8fbe8eae9796ab14a126f44d",
+                "shasum": ""
+            },
+            "require": {
+                "kriswallsmith/assetic": "1.1.*",
+                "natxet/cssmin": "dev-master",
+                "php": ">=5.3",
+                "tedivm/jshrink": "0.5.*"
+            },
+            "require-dev": {
+                "leafo/lessphp": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "SugiPHP\\Assets\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Plamen Popov",
+                    "email": "tzappa@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "SugiPHP Assets Management Component based on Assetic",
+            "keywords": [
+                "assetic",
+                "assets",
+                "css",
+                "javascript",
+                "less"
+            ],
+            "time": "2013-04-22 16:20:52"
+        },
+        {
+            "name": "sugiphp/cache",
+            "version": "dev-master",
+            "target-dir": "SugiPHP/Cache",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SugiPHP/Cache.git",
+                "reference": "54634e7df0ba3cd1aea295de81279a4867cab3f0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SugiPHP/Cache/zipball/54634e7df0ba3cd1aea295de81279a4867cab3f0",
+                "reference": "54634e7df0ba3cd1aea295de81279a4867cab3f0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "SugiPHP\\Cache\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Plamen Popov",
+                    "email": "tzappa@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "SugiPHP Cache Component",
+            "keywords": [
+                "apc",
+                "cache",
+                "memcache",
+                "sugiphp"
+            ],
+            "time": "2013-04-23 06:20:13"
+        },
+        {
+            "name": "sugiphp/config",
+            "version": "dev-master",
+            "target-dir": "SugiPHP/Config",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SugiPHP/Config.git",
+                "reference": "4372640429f7805e5456e4dd1bd6a258ec1b0944"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SugiPHP/Config/zipball/4372640429f7805e5456e4dd1bd6a258ec1b0944",
+                "reference": "4372640429f7805e5456e4dd1bd6a258ec1b0944",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "require-dev": {
+                "symfony/yaml": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "SugiPHP\\Config\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Plamen Popov",
+                    "email": "tzappa@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "SugiPHP Config Component",
+            "keywords": [
+                "config",
+                "sugiphp"
+            ],
+            "time": "2013-03-28 12:27:34"
+        },
+        {
+            "name": "sugiphp/database",
+            "version": "dev-master",
+            "target-dir": "SugiPHP/Database",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SugiPHP/Database.git",
+                "reference": "a917d81c6df25eff5aeb8face315e61a30e952b1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SugiPHP/Database/zipball/a917d81c6df25eff5aeb8face315e61a30e952b1",
+                "reference": "a917d81c6df25eff5aeb8face315e61a30e952b1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "SugiPHP\\Database\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Plamen Popov",
+                    "email": "tzappa@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Database abstraction layer",
+            "keywords": [
+                "database",
+                "mysql",
+                "pdo",
+                "pgsql",
+                "sqlite"
+            ],
+            "time": "2013-04-10 06:34:06"
+        },
+        {
+            "name": "sugiphp/events",
+            "version": "dev-master",
+            "target-dir": "SugiPHP/Events",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SugiPHP/Events.git",
+                "reference": "be678f8b4d48dbc9e6024cd855aaa4b9813fa6ea"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SugiPHP/Events/zipball/be678f8b4d48dbc9e6024cd855aaa4b9813fa6ea",
+                "reference": "be678f8b4d48dbc9e6024cd855aaa4b9813fa6ea",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "SugiPHP\\Events\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Plamen Popov",
+                    "email": "tzappa@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Observer design pattern-like events system",
+            "keywords": [
+                "dispatcher",
+                "event",
+                "observer"
+            ],
+            "time": "2013-04-03 13:37:45"
+        },
+        {
+            "name": "sugiphp/filesystem",
+            "version": "dev-master",
+            "target-dir": "SugiPHP/FileSystem",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SugiPHP/FileSystem.git",
+                "reference": "ca4a680585ca43ebc7eb062a43c7621eb4fd6020"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SugiPHP/FileSystem/zipball/ca4a680585ca43ebc7eb062a43c7621eb4fd6020",
+                "reference": "ca4a680585ca43ebc7eb062a43c7621eb4fd6020",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "SugiPHP\\FileSystem\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Plamen Popov",
+                    "email": "tzappa@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Basic utilities to work with file system",
+            "keywords": [
+                "directories",
+                "files",
+                "filesystem"
+            ],
+            "time": "2013-04-20 21:06:53"
+        },
+        {
+            "name": "sugiphp/http",
+            "version": "dev-master",
+            "target-dir": "SugiPHP/HTTP",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SugiPHP/HTTP.git",
+                "reference": "7a75f40e99ade62677f587b5182e1339f0a1deb4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SugiPHP/HTTP/zipball/7a75f40e99ade62677f587b5182e1339f0a1deb4",
+                "reference": "7a75f40e99ade62677f587b5182e1339f0a1deb4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "SugiPHP\\HTTP\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Plamen Popov",
+                    "email": "tzappa@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "HTTP Request and Response classes",
+            "keywords": [
+                "http",
+                "request",
+                "response"
+            ],
+            "time": "2013-04-15 12:38:39"
+        },
+        {
+            "name": "sugiphp/logger",
+            "version": "dev-master",
+            "target-dir": "SugiPHP/Logger",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SugiPHP/Logger.git",
+                "reference": "05e694cd06eb162049add40f4ebab4eb830bc48c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SugiPHP/Logger/zipball/05e694cd06eb162049add40f4ebab4eb830bc48c",
+                "reference": "05e694cd06eb162049add40f4ebab4eb830bc48c",
+                "shasum": ""
+            },
+            "require": {
+                "monolog/monolog": "1.4.*",
+                "php": ">=5.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "SugiPHP\\Logger\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Plamen Popov",
+                    "email": "tzappa@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "keywords": [
+                "log",
+                "logging"
+            ],
+            "time": "2013-04-07 20:09:54"
+        },
+        {
+            "name": "sugiphp/routing",
+            "version": "dev-master",
+            "target-dir": "SugiPHP/Routing",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SugiPHP/Routing.git",
+                "reference": "b74e6045993f7e7b8851e4a93132ef1e672b465c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SugiPHP/Routing/zipball/b74e6045993f7e7b8851e4a93132ef1e672b465c",
+                "reference": "b74e6045993f7e7b8851e4a93132ef1e672b465c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "SugiPHP\\Routing\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Plamen Popov",
+                    "email": "tzappa@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Routing",
+            "keywords": [
+                "route"
+            ],
+            "time": "2013-04-16 14:27:00"
+        },
+        {
+            "name": "swiftmailer/swiftmailer",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/swiftmailer/swiftmailer.git",
+                "reference": "e77eb358a1aa7157afb922f33e2afc22f6a7bef2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/e77eb358a1aa7157afb922f33e2afc22f6a7bef2",
+                "reference": "e77eb358a1aa7157afb922f33e2afc22f6a7bef2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.4"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.3-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "lib/swift_required.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Chris Corbyn"
+                }
+            ],
+            "description": "Swiftmailer, free feature-rich PHP mailer",
+            "homepage": "http://swiftmailer.org",
+            "keywords": [
+                "mail",
+                "mailer"
+            ],
+            "time": "2013-04-11 10:22:54"
+        },
+        {
+            "name": "symfony/process",
+            "version": "dev-master",
+            "target-dir": "Symfony/Component/Process",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Process.git",
+                "reference": "a2a22e359c8c6c6a44ec2d158d0865e9a94348b1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Process/zipball/a2a22e359c8c6c6a44ec2d158d0865e9a94348b1",
+                "reference": "a2a22e359c8c6c6a44ec2d158d0865e9a94348b1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Process\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Process Component",
+            "homepage": "http://symfony.com",
+            "time": "2013-04-23 20:53:10"
+        },
+        {
+            "name": "symfony/yaml",
+            "version": "2.2.x-dev",
+            "target-dir": "Symfony/Component/Yaml",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Yaml.git",
+                "reference": "v2.2.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Yaml/zipball/v2.2.1",
+                "reference": "v2.2.1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Yaml\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Yaml Component",
+            "homepage": "http://symfony.com",
+            "time": "2013-03-23 07:49:54"
+        },
+        {
+            "name": "tedivm/jshrink",
+            "version": "v0.5.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tedivm/JShrink",
+                "reference": "v0.5.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/tedivm/JShrink/archive/v0.5.1.zip",
+                "reference": "v0.5.1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "JShrink": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Robert Hafner",
+                    "email": "tedivm@tedivm.com"
+                }
+            ],
+            "description": "Javascript Minifier built in PHP",
+            "homepage": "http://github.com/tedivm/JShrink",
+            "keywords": [
+                "javascript",
+                "minifier"
+            ],
+            "time": "2012-11-26 04:48:55"
+        }
+    ],
+    "packages-dev": [
+
+    ],
+    "aliases": [
+
+    ],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "sugiphp/config": 20,
+        "sugiphp/cache": 20,
+        "sugiphp/logger": 20,
+        "sugiphp/database": 20,
+        "sugiphp/events": 20,
+        "sugiphp/http": 20,
+        "sugiphp/routing": 20,
+        "sugiphp/assets": 20,
+        "sugiphp/filesystem": 20,
+        "leafo/lessphp": 20
+    },
+    "platform": {
+        "php": ">=5.3"
+    },
+    "platform-dev": [
+
+    ]
+}

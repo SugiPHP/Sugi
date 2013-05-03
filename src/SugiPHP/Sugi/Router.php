@@ -10,7 +10,6 @@ namespace SugiPHP\Sugi;
 
 use SugiPHP\Routing\Router as BaseRouter;
 use SugiPHP\Routing\Route;
-use SugiPHP\HTTP\Request;
 
 class Router
 {
@@ -96,13 +95,16 @@ class Router
 
 		// default request is current request
 		if (is_null($request)) {
-			$request = Request::real();
+			$request = Request::getInstance();
 		}
 
 		// match first route that matches the request
 		static::$match = $router->match($request->getPath(), $request->getMethod(), $request->getHost(), $request->getScheme());
 
-		if (static::$match !== false) {
+		if (static::$match) {
+			// Fire an event
+			Event::fire("sugi.router.match", static::$match);
+
 			$name = static::getName();
 			if (isset(static::$callables[$name])) {
 				$callable = static::$callables[$name];
@@ -111,6 +113,9 @@ class Router
 					$callable(static::$match);
 				}
 			}
+		} else {
+			// Fire a No Match event
+			Event::fire("sugi.router.nomatch");
 		}
 
 		return static::$match;
@@ -123,9 +128,29 @@ class Router
 	 * @param  array  $params
 	 * @return string
 	 */
-	public static function build($name, array $params)
+	public static function build($name, array $params = array())
 	{
 		return static::$router->get($name)->build($params);
+	}
+
+	/**
+	 * Builds and URL based on current route and using current request as default,
+	 * modifying those parameters that are given.
+	 * 
+	 * @param  array  $params Parameters that should be changed
+	 * @return string
+	 */
+	public static function modify(array $params)
+	{
+		$build_params = array();
+
+		foreach (static::$match as $param => $value) {
+			if ($param !== "_name") {
+				$build_params[$param] = isset($params[$param]) ? $params[$param] : $value;
+			}
+		}
+
+		return static::getRoute()->build($build_params);
 	}
 
 	/**
@@ -156,7 +181,7 @@ class Router
 	 */
 	public static function getRoute()
 	{
-		return static::getParam("_route");
+		return static::$router->get(static::getName());
 	}
 
 	/**

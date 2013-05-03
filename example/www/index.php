@@ -16,6 +16,7 @@ use SugiPHP\Sugi\JS;
 use SugiPHP\Sugi\File;
 use SugiPHP\Sugi\Cache;
 use SugiPHP\Sugi\Database;
+use SugiPHP\Sugi\Mail;
 use SugiPHP\Sugi\Router;
 use SugiPHP\Sugi\PDO;
 use SugiPHP\HTTP\Request;
@@ -41,15 +42,16 @@ include "../../vendor/autoload.php";
 // ROUTER
 // ASSETS
 // FILE
+// MAIL
 
 // TODO:
+// 	STOPWATCH
 //  DIR 
 // 	FILTER
 // 	SESSION
 // 	IMAGE PROCESSING - Imagine
 // 	CRON
 // 	I18N
-// 	STOPWATCH
 
 // CONFIG
 Config::$path = APPPATH."config".DS;
@@ -63,6 +65,8 @@ $db = PDO::getInstance();
 foreach ($db->query("SHOW tables") as $row) {
 	var_dump($row);
 }
+
+// Mail::send("tzappa@gmail.com", "testing mail class", "Not html body");
 
 // EVENTS
 Event::listen("sugi.database.post_open", function ($e) {
@@ -80,7 +84,7 @@ if (!File::exists(APPPATH."assets/test.css")) {
 }
 CSS::add("test.css");
 
-// echo "<style>" . CSS::pack(false) . "</style>";
+// echo "<style>" . CSS::dump() . "</style>";
 echo '<link rel="stylesheet" href="css/'.CSS::pack().'" />';
 
 JS::add("timer.js");
@@ -108,7 +112,6 @@ var_dump($sqlite->all("SELECT * FROM testtt"));
 // this will be emailed
 // Logger::emergency("Some error occured when connecting to the database");
 
-
 Router::add("mvc", "/{controller}/{action}/{param}", array("controller" => "home", "action" => "index", "param" => ""), array(), function($route) {
 	var_dump($route);
 });
@@ -123,5 +126,4 @@ foreach($requests as $request) {
 }
 
 $timer = microtime(true) - APPLICATION_START;
-echo "<script>\nvar timer = $timer;\n" . JS::pack(false) . "</script>";
-
+echo "<script>\nvar timer = $timer;\n" . JS::dump() . "</script>";
