@@ -10,6 +10,7 @@ namespace SugiPHP\Sugi;
 
 use SugiPHP\Routing\Router as BaseRouter;
 use SugiPHP\Routing\Route;
+use SugiPHP\HTTP\Request;
 
 class Router
 {

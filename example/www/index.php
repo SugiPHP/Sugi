@@ -19,7 +19,7 @@ use SugiPHP\Sugi\Database;
 use SugiPHP\Sugi\Mail;
 use SugiPHP\Sugi\Router;
 use SugiPHP\Sugi\PDO;
-use SugiPHP\HTTP\Request;
+use SugiPHP\Sugi\Request;
 
 // start a timer
 define("APPLICATION_START", microtime(true));
