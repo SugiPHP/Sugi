@@ -96,7 +96,7 @@ class Router
 
 		// default request is current request
 		if (is_null($request)) {
-			$request = Request::getInstance();
+			$request = \SugiPHP\Sugi\Request::getInstance();
 		}
 
 		// match first route that matches the request
