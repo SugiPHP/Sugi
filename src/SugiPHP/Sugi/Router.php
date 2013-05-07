@@ -9,8 +9,8 @@
 namespace SugiPHP\Sugi;
 
 use SugiPHP\Routing\Router as BaseRouter;
+use SugiPHP\HTTP\Request as BaseRequest;
 use SugiPHP\Routing\Route;
-use SugiPHP\HTTP\Request;
 
 class Router
 {
@@ -89,7 +89,7 @@ class Router
 	 * @param  SugiPHP\HTTP\Request $request
 	 * @return array|null
 	 */
-	public static function match(Request $request = null)
+	public static function match(BaseRequest $request = null)
 	{
 		// instantiate base router
 		$router = static::getInstance();

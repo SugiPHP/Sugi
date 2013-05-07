@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "f15b1e32ce33537c531c2f288763bc35",
+    "hash": "48d5b6db62340670f41b3a5c87561931",
     "packages": [
         {
             "name": "kriswallsmith/assetic",
@@ -11,12 +11,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kriswallsmith/assetic.git",
-                "reference": "0a55a9ba70bd9250899ad77deceaf8cb9e145371"
+                "reference": "1b17f9a239276f24344f9f7d7be8293f6dca4e19"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kriswallsmith/assetic/zipball/0a55a9ba70bd9250899ad77deceaf8cb9e145371",
-                "reference": "0a55a9ba70bd9250899ad77deceaf8cb9e145371",
+                "url": "https://api.github.com/repos/kriswallsmith/assetic/zipball/1b17f9a239276f24344f9f7d7be8293f6dca4e19",
+                "reference": "1b17f9a239276f24344f9f7d7be8293f6dca4e19",
                 "shasum": ""
             },
             "require": {
@@ -74,7 +74,7 @@
                 "compression",
                 "minification"
             ],
-            "time": "2013-04-02 21:36:28"
+            "time": "2013-04-27 14:32:20"
         },
         {
             "name": "leafo/lessphp",
@@ -644,12 +644,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "e77eb358a1aa7157afb922f33e2afc22f6a7bef2"
+                "reference": "d64c1bbee26d10f9367eb57d81b84abe0eaceb17"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/e77eb358a1aa7157afb922f33e2afc22f6a7bef2",
-                "reference": "e77eb358a1aa7157afb922f33e2afc22f6a7bef2",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/d64c1bbee26d10f9367eb57d81b84abe0eaceb17",
+                "reference": "d64c1bbee26d10f9367eb57d81b84abe0eaceb17",
                 "shasum": ""
             },
             "require": {
@@ -658,7 +658,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.3-dev"
+                    "dev-master": "5.1-dev"
                 }
             },
             "autoload": {
@@ -668,7 +668,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "LGPL"
+                "MIT"
             ],
             "authors": [
                 {
@@ -685,7 +685,7 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2013-04-11 10:22:54"
+            "time": "2013-05-05 19:46:57"
         },
         {
             "name": "symfony/process",
@@ -694,12 +694,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Process.git",
-                "reference": "a2a22e359c8c6c6a44ec2d158d0865e9a94348b1"
+                "reference": "bb721b29e033594512f8b08386e13593b0faaf0f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Process/zipball/a2a22e359c8c6c6a44ec2d158d0865e9a94348b1",
-                "reference": "a2a22e359c8c6c6a44ec2d158d0865e9a94348b1",
+                "url": "https://api.github.com/repos/symfony/Process/zipball/bb721b29e033594512f8b08386e13593b0faaf0f",
+                "reference": "bb721b29e033594512f8b08386e13593b0faaf0f",
                 "shasum": ""
             },
             "require": {
@@ -732,7 +732,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "http://symfony.com",
-            "time": "2013-04-23 20:53:10"
+            "time": "2013-05-06 20:03:44"
         },
         {
             "name": "symfony/yaml",
@@ -741,12 +741,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Yaml.git",
-                "reference": "v2.2.1"
+                "reference": "9b824a416805631a7cb0a9df535916a0b7053b1e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Yaml/zipball/v2.2.1",
-                "reference": "v2.2.1",
+                "url": "https://api.github.com/repos/symfony/Yaml/zipball/9b824a416805631a7cb0a9df535916a0b7053b1e",
+                "reference": "9b824a416805631a7cb0a9df535916a0b7053b1e",
                 "shasum": ""
             },
             "require": {
@@ -779,7 +779,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "http://symfony.com",
-            "time": "2013-03-23 07:49:54"
+            "time": "2013-04-17 05:27:14"
         },
         {
             "name": "tedivm/jshrink",
@@ -839,8 +839,7 @@
         "sugiphp/http": 20,
         "sugiphp/routing": 20,
         "sugiphp/assets": 20,
-        "sugiphp/filesystem": 20,
-        "leafo/lessphp": 20
+        "sugiphp/filesystem": 20
     },
     "platform": {
         "php": ">=5.3"
