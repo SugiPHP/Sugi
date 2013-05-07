@@ -32,6 +32,23 @@ class Request
 
 		return call_user_func_array(array($instance, $method), $parameters);
 	}
+
+	/**
+	 * Creates a custom request.
+	 * 
+	 * @param  string $uri
+	 * @param  string $method
+	 * @param  array  $params
+	 * @param  array  $cookies
+	 * @return SugiPHP\HTTP\Request
+	 */
+	public static function custom($uri, $method = "GET", array $params = array(), array $cookies = array())
+	{
+		// make a new request and override static request
+		static::$request = BaseRequest::custom($uri, $method, $params, $cookies);
+
+		return static::$request;
+	}
 	
 	/**
 	 * Gets the instance of SugiPHP\HTTP\Request.
