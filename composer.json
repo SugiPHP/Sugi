@@ -19,6 +19,7 @@
         "sugiphp/assets": "dev-master",
         "sugiphp/filesystem": "dev-master",
         "symfony/yaml": "2.2.*",
+        "pimple/pimple": "1.0.*",
         "leafo/lessphp": "0.3.*",
         "swiftmailer/swiftmailer": "4.3.*"
     },

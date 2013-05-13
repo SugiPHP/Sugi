@@ -20,6 +20,7 @@ use SugiPHP\Sugi\Mail;
 use SugiPHP\Sugi\Router;
 use SugiPHP\Sugi\PDO;
 use SugiPHP\Sugi\Request;
+use SugiPHP\Sugi\Container;
 
 // start a timer
 define("APPLICATION_START", microtime(true));
@@ -43,6 +44,7 @@ include "../../vendor/autoload.php";
 // ASSETS
 // FILE
 // MAIL
+// CONTAINER
 
 // TODO:
 // 	STOPWATCH
@@ -60,8 +62,41 @@ Config::$path = APPPATH."config".DS;
 // $log = Logger::getInstance();
 Logger::log("nsbop", "someone's testing");
 
+
+// CONTAINER
+$c = Container::getInstance();
+$c["db"] = Container::share(function ($c) {
+	echo "connecting to DB";
+
+	$config = Config::get("database");
+	// The Data Source Name, or DSN, contains the information required to connect to the database. 
+	if (isset($config["dsn"])) {
+		$dsn = $config["dsn"];
+	} else {
+		$dsn = $config["type"].":";
+		if (is_array($config[$config["type"]])) {
+			$config = $config[$config["type"]];
+		}
+		if (isset($config["database"])) {
+			$dsn .= "dbname={$config["database"]};";
+		}
+		if (isset($config["host"])) {
+			$dsn .= "host={$config["host"]};";
+		}
+		if (isset($config["port"])) {
+			$dsn .= "port={$config["port"]};";
+		}
+	}
+	$dsn = rtrim($dsn, ";");
+	$user = isset($config["user"]) ? $config["user"] : "";
+	$pass = isset($config["pass"]) ? $config["pass"] : "";
+
+	return new \PDO($dsn, $user, $pass);
+});
+
 // PDO
-$db = PDO::getInstance();
+$db = $c["db"]; // container will initialize PDO driver
+$db = Container::get("db"); // only ONCE
 foreach ($db->query("SHOW tables") as $row) {
 	var_dump($row);
 }
