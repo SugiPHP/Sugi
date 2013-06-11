@@ -123,38 +123,6 @@ class Router
 	}
 
 	/**
-	 * Builds an URL based on route with name $name.
-	 * 
-	 * @param  string $name
-	 * @param  array  $params
-	 * @return string
-	 */
-	public static function build($name, array $params = array())
-	{
-		return static::$router->get($name)->build($params);
-	}
-
-	/**
-	 * Builds and URL based on current route and using current request as default,
-	 * modifying those parameters that are given.
-	 * 
-	 * @param  array  $params Parameters that should be changed
-	 * @return string
-	 */
-	public static function modify(array $params)
-	{
-		$build_params = array();
-
-		foreach (static::$match as $param => $value) {
-			if ($param !== "_name") {
-				$build_params[$param] = isset($params[$param]) ? $params[$param] : $value;
-			}
-		}
-
-		return static::getRoute()->build($build_params);
-	}
-
-	/**
 	 * Returns all request variables.
 	 * 
 	 * @return array
