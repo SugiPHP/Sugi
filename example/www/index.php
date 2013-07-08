@@ -18,7 +18,6 @@ use SugiPHP\Sugi\Cache;
 use SugiPHP\Sugi\Database;
 use SugiPHP\Sugi\Mail;
 use SugiPHP\Sugi\Router;
-use SugiPHP\Sugi\PDO;
 use SugiPHP\Sugi\Request;
 use SugiPHP\Sugi\Container;
 

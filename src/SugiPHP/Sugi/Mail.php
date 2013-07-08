@@ -53,8 +53,8 @@ class Mail
 			if (isset($transportConfig["username"])) {
 				$transport->setUsername($transportConfig["username"]);
 			}
-			if (isset($transportConfig["username"])) {
-				$transport->setPassword($transportConfig["username"]);
+			if (isset($transportConfig["password"])) {
+				$transport->setPassword($transportConfig["password"]);
 			}
 		}
 
