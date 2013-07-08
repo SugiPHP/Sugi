@@ -11,12 +11,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kriswallsmith/assetic.git",
-                "reference": "1b17f9a239276f24344f9f7d7be8293f6dca4e19"
+                "reference": "82e8fc20a3b043b378a7efbda9e3d406d420f00e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kriswallsmith/assetic/zipball/1b17f9a239276f24344f9f7d7be8293f6dca4e19",
-                "reference": "1b17f9a239276f24344f9f7d7be8293f6dca4e19",
+                "url": "https://api.github.com/repos/kriswallsmith/assetic/zipball/82e8fc20a3b043b378a7efbda9e3d406d420f00e",
+                "reference": "82e8fc20a3b043b378a7efbda9e3d406d420f00e",
                 "shasum": ""
             },
             "require": {
@@ -31,9 +31,9 @@
                 "leafo/scssphp": "*",
                 "leafo/scssphp-compass": "*",
                 "mrclay/minify": "*",
-                "phpunit/phpunit": "3.7.*",
+                "phpunit/phpunit": ">=3.7,<4.0",
                 "ptachoire/cssembed": "*",
-                "twig/twig": ">=1.6.0,<2.0"
+                "twig/twig": ">=1.6,<2.0"
             },
             "suggest": {
                 "leafo/lessphp": "Assetic provides the integration with the lessphp LESS compiler",
@@ -45,7 +45,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.1-dev"
+                    "dev-master": "1.2-dev"
                 }
             },
             "autoload": {
@@ -74,7 +74,7 @@
                 "compression",
                 "minification"
             ],
-            "time": "2013-04-27 14:32:20"
+            "time": "2013-06-13 16:47:03"
         },
         {
             "name": "leafo/lessphp",
@@ -82,12 +82,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/leafo/lessphp.git",
-                "reference": "dbb61d4beaafb0d708b79b008d0b708abeb4eae9"
+                "reference": "ff86f2941c3f3d67d56acad2f8902ca57c73b359"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/leafo/lessphp/zipball/dbb61d4beaafb0d708b79b008d0b708abeb4eae9",
-                "reference": "dbb61d4beaafb0d708b79b008d0b708abeb4eae9",
+                "url": "https://api.github.com/repos/leafo/lessphp/zipball/ff86f2941c3f3d67d56acad2f8902ca57c73b359",
+                "reference": "ff86f2941c3f3d67d56acad2f8902ca57c73b359",
                 "shasum": ""
             },
             "type": "library",
@@ -115,7 +115,7 @@
             ],
             "description": "lessphp is a compiler for LESS written in PHP.",
             "homepage": "http://leafo.net/lessphp/",
-            "time": "2013-05-07 23:46:12"
+            "time": "2013-05-22 17:52:29"
         },
         {
             "name": "monolog/monolog",
@@ -185,12 +185,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/natxet/CssMin.git",
-                "reference": "9801e2a0de7ae252ca4f2b85542d75a82047a8b4"
+                "reference": "afdcdbdb5fc332313f47a79ae60346df3e69a572"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/natxet/CssMin/zipball/9801e2a0de7ae252ca4f2b85542d75a82047a8b4",
-                "reference": "9801e2a0de7ae252ca4f2b85542d75a82047a8b4",
+                "url": "https://api.github.com/repos/natxet/CssMin/zipball/afdcdbdb5fc332313f47a79ae60346df3e69a572",
+                "reference": "afdcdbdb5fc332313f47a79ae60346df3e69a572",
                 "shasum": ""
             },
             "require": {
@@ -198,9 +198,9 @@
             },
             "type": "library",
             "autoload": {
-                "psr-0": {
-                    "CssMin": "src/"
-                }
+                "classmap": [
+                    "src/"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -219,7 +219,7 @@
                 "css",
                 "minify"
             ],
-            "time": "2013-03-15 18:47:32"
+            "time": "2013-07-02 20:53:35"
         },
         {
             "name": "pimple/pimple",
@@ -312,12 +312,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SugiPHP/Assets.git",
-                "reference": "5e77df6c9f689e6e8fbe8eae9796ab14a126f44d"
+                "reference": "65ed3d77c59300b253d35755f2114bb01f8362c4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SugiPHP/Assets/zipball/5e77df6c9f689e6e8fbe8eae9796ab14a126f44d",
-                "reference": "5e77df6c9f689e6e8fbe8eae9796ab14a126f44d",
+                "url": "https://api.github.com/repos/SugiPHP/Assets/zipball/65ed3d77c59300b253d35755f2114bb01f8362c4",
+                "reference": "65ed3d77c59300b253d35755f2114bb01f8362c4",
                 "shasum": ""
             },
             "require": {
@@ -354,7 +354,7 @@
                 "javascript",
                 "less"
             ],
-            "time": "2013-04-22 16:20:52"
+            "time": "2013-07-04 18:13:47"
         },
         {
             "name": "sugiphp/cache",
@@ -452,12 +452,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SugiPHP/Database.git",
-                "reference": "a917d81c6df25eff5aeb8face315e61a30e952b1"
+                "reference": "73d5a82786786e9a7406ddd523ad830d5801a148"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SugiPHP/Database/zipball/a917d81c6df25eff5aeb8face315e61a30e952b1",
-                "reference": "a917d81c6df25eff5aeb8face315e61a30e952b1",
+                "url": "https://api.github.com/repos/SugiPHP/Database/zipball/73d5a82786786e9a7406ddd523ad830d5801a148",
+                "reference": "73d5a82786786e9a7406ddd523ad830d5801a148",
                 "shasum": ""
             },
             "require": {
@@ -485,7 +485,7 @@
                 "pgsql",
                 "sqlite"
             ],
-            "time": "2013-04-10 06:34:06"
+            "time": "2013-06-19 09:01:13"
         },
         {
             "name": "sugiphp/events",
@@ -574,12 +574,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SugiPHP/HTTP.git",
-                "reference": "7a75f40e99ade62677f587b5182e1339f0a1deb4"
+                "reference": "fb9864289af194d4efc4b1001870bcc25dc2af08"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SugiPHP/HTTP/zipball/7a75f40e99ade62677f587b5182e1339f0a1deb4",
-                "reference": "7a75f40e99ade62677f587b5182e1339f0a1deb4",
+                "url": "https://api.github.com/repos/SugiPHP/HTTP/zipball/fb9864289af194d4efc4b1001870bcc25dc2af08",
+                "reference": "fb9864289af194d4efc4b1001870bcc25dc2af08",
                 "shasum": ""
             },
             "require": {
@@ -605,7 +605,7 @@
                 "request",
                 "response"
             ],
-            "time": "2013-04-15 12:38:39"
+            "time": "2013-06-10 11:24:18"
         },
         {
             "name": "sugiphp/logger",
@@ -653,12 +653,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SugiPHP/Routing.git",
-                "reference": "b74e6045993f7e7b8851e4a93132ef1e672b465c"
+                "reference": "c0768509b48374ea9d46d94dcf7686e03fa7da68"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SugiPHP/Routing/zipball/b74e6045993f7e7b8851e4a93132ef1e672b465c",
-                "reference": "b74e6045993f7e7b8851e4a93132ef1e672b465c",
+                "url": "https://api.github.com/repos/SugiPHP/Routing/zipball/c0768509b48374ea9d46d94dcf7686e03fa7da68",
+                "reference": "c0768509b48374ea9d46d94dcf7686e03fa7da68",
                 "shasum": ""
             },
             "require": {
@@ -682,7 +682,7 @@
             "keywords": [
                 "route"
             ],
-            "time": "2013-04-16 14:27:00"
+            "time": "2013-06-10 11:15:43"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -740,12 +740,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Process.git",
-                "reference": "v2.3.0-BETA2"
+                "reference": "f3f84fec23ce3ff7d0510c308c7842729cb0ba8c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Process/zipball/v2.3.0-BETA2",
-                "reference": "v2.3.0-BETA2",
+                "url": "https://api.github.com/repos/symfony/Process/zipball/f3f84fec23ce3ff7d0510c308c7842729cb0ba8c",
+                "reference": "f3f84fec23ce3ff7d0510c308c7842729cb0ba8c",
                 "shasum": ""
             },
             "require": {
@@ -754,7 +754,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.3-dev"
+                    "dev-master": "2.4-dev"
                 }
             },
             "autoload": {
@@ -778,7 +778,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "http://symfony.com",
-            "time": "2013-05-06 20:03:44"
+            "time": "2013-06-23 08:16:33"
         },
         {
             "name": "symfony/yaml",
@@ -787,12 +787,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Yaml.git",
-                "reference": "2412f9950036ade5e89581e648edbe04e8fe2681"
+                "reference": "v2.2.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Yaml/zipball/2412f9950036ade5e89581e648edbe04e8fe2681",
-                "reference": "2412f9950036ade5e89581e648edbe04e8fe2681",
+                "url": "https://api.github.com/repos/symfony/Yaml/zipball/v2.2.3",
+                "reference": "v2.2.3",
                 "shasum": ""
             },
             "require": {
