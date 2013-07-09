@@ -26,6 +26,17 @@ class URI
 	}
 
 	/**
+	 * Builds and URL based on the current route.
+	 * 
+	 * @param  array  $params Parameters that should be set
+	 * @return string
+	 */
+	public static function current(array $params)
+	{
+		return Router::getRoute()->build($params);
+	}
+
+	/**
 	 * Builds and URL based on current route and using current request as default,
 	 * modifying those parameters that are given.
 	 * 
