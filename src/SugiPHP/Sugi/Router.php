@@ -102,24 +102,25 @@ class Router
 		// match first route that matches the request
 		static::$match = $router->match($request->getPath(), $request->getMethod(), $request->getHost(), $request->getScheme());
 
-		if (static::$match) {
-			// Fire an event
-			Event::fire("sugi.router.match", static::$match);
+		return static::checkMatch();
+	}
 
-			$name = static::getName();
-			if (isset(static::$callables[$name])) {
-				$callable = static::$callables[$name];
-				if (is_callable($callable)) {
-					// fire the closure
-					$callable(static::$match);
-				}
-			}
-		} else {
-			// Fire a No Match event
-			Event::fire("sugi.router.nomatch");
-		}
+	/**
+	 * Continues walking through registered routes and returns next route that matches
+	 * previously registered request. If the route was added with a closure it will be executed.
+	 * @see static::match() method.
+	 *
+	 * @return array|null
+	 */
+	public static function matchNext()
+	{
+		// instantiate base router
+		$router = static::getInstance();
 
-		return static::$match;
+		// match next route that matches the request
+		static::$match = $router->matchNext();
+
+		return static::checkMatch();
 	}
 
 	/**
@@ -161,5 +162,27 @@ class Router
 	public static function getName()
 	{
 		return static::getParam("_name");
+	}
+
+	protected static function checkMatch()
+	{
+		if (static::$match) {
+			// Fire an event
+			Event::fire("sugi.router.match", static::$match);
+
+			$name = static::getName();
+			if (isset(static::$callables[$name])) {
+				$callable = static::$callables[$name];
+				if (is_callable($callable)) {
+					// fire the closure
+					$callable(static::$match);
+				}
+			}
+		} else {
+			// Fire a No Match event
+			Event::fire("sugi.router.nomatch");
+		}
+
+		return static::$match;
 	}
 }
