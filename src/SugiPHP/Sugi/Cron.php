@@ -8,7 +8,7 @@
 
 namespace SugiPHP\Sugi;
 
-use SugiPHP\Cache\Cron as BaseCron;
+use SugiPHP\Cron\Cron as BaseCron;
 
 class Cron
 {
