@@ -56,6 +56,8 @@ class Mail
 			if (isset($transportConfig["password"])) {
 				$transport->setPassword($transportConfig["password"]);
 			}
+		} else {
+			throw new \Exception("Undefined Transport Type");
 		}
 
 		// Create the Mailer using your created Transport

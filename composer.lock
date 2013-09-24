@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "37a5529eaa1c00b9bbe7f228f40641f8",
+    "hash": "f746dc1257325a75424a1e0b04fefc31",
     "packages": [
         {
             "name": "kriswallsmith/assetic",
@@ -11,12 +11,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kriswallsmith/assetic.git",
-                "reference": "v1.1.2"
+                "reference": "1d671c54f147ece319642132330927672b6190a7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kriswallsmith/assetic/zipball/v1.1.2",
-                "reference": "v1.1.2",
+                "url": "https://api.github.com/repos/kriswallsmith/assetic/zipball/1d671c54f147ece319642132330927672b6190a7",
+                "reference": "1d671c54f147ece319642132330927672b6190a7",
                 "shasum": ""
             },
             "require": {
@@ -74,7 +74,7 @@
                 "compression",
                 "minification"
             ],
-            "time": "2013-07-19 00:03:27"
+            "time": "2013-09-03 12:44:05"
         },
         {
             "name": "leafo/lessphp",
@@ -82,18 +82,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/leafo/lessphp.git",
-                "reference": "v0.4.0"
+                "reference": "6eee2d0f0dd49a288e17a2e7e6ea71ccc026042a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/leafo/lessphp/zipball/v0.4.0",
-                "reference": "v0.4.0",
+                "url": "https://api.github.com/repos/leafo/lessphp/zipball/6eee2d0f0dd49a288e17a2e7e6ea71ccc026042a",
+                "reference": "6eee2d0f0dd49a288e17a2e7e6ea71ccc026042a",
                 "shasum": ""
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.3-dev"
+                    "dev-master": "0.4.x-dev"
                 }
             },
             "autoload": {
@@ -115,7 +115,7 @@
             ],
             "description": "lessphp is a compiler for LESS written in PHP.",
             "homepage": "http://leafo.net/lessphp/",
-            "time": "2013-08-09 17:09:19"
+            "time": "2013-09-20 21:39:29"
         },
         {
             "name": "monolog/monolog",
@@ -227,12 +227,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabpot/Pimple.git",
-                "reference": "ae11e57e8c2bb414b2ff93396dbbfc0eb92feb94"
+                "reference": "471c7d7c52ad6594e17b8ec33efdd1be592b5d83"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Pimple/zipball/ae11e57e8c2bb414b2ff93396dbbfc0eb92feb94",
-                "reference": "ae11e57e8c2bb414b2ff93396dbbfc0eb92feb94",
+                "url": "https://api.github.com/repos/fabpot/Pimple/zipball/471c7d7c52ad6594e17b8ec33efdd1be592b5d83",
+                "reference": "471c7d7c52ad6594e17b8ec33efdd1be592b5d83",
                 "shasum": ""
             },
             "require": {
@@ -241,7 +241,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "1.1.x-dev"
                 }
             },
             "autoload": {
@@ -265,7 +265,7 @@
                 "container",
                 "dependency injection"
             ],
-            "time": "2013-03-08 08:21:40"
+            "time": "2013-09-19 04:53:08"
         },
         {
             "name": "psr/log",
@@ -446,6 +446,46 @@
             "time": "2013-03-28 12:27:34"
         },
         {
+            "name": "sugiphp/cron",
+            "version": "dev-master",
+            "target-dir": "SugiPHP/Cron",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SugiPHP/Cron.git",
+                "reference": "f10b06f075635e5278287d82bcd5ef26fb136bfc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SugiPHP/Cron/zipball/f10b06f075635e5278287d82bcd5ef26fb136bfc",
+                "reference": "f10b06f075635e5278287d82bcd5ef26fb136bfc",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "SugiPHP\\Cron\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Plamen Popov",
+                    "email": "tzappa@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Cron jobs with PHP",
+            "keywords": [
+                "cron",
+                "cronjob",
+                "crontab"
+            ],
+            "time": "2013-09-24 10:04:52"
+        },
+        {
             "name": "sugiphp/database",
             "version": "dev-master",
             "target-dir": "SugiPHP/Database",
@@ -574,12 +614,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SugiPHP/HTTP.git",
-                "reference": "fb9864289af194d4efc4b1001870bcc25dc2af08"
+                "reference": "a2af88ac6d3631932b67d263f88d0d6f19361ff9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SugiPHP/HTTP/zipball/fb9864289af194d4efc4b1001870bcc25dc2af08",
-                "reference": "fb9864289af194d4efc4b1001870bcc25dc2af08",
+                "url": "https://api.github.com/repos/SugiPHP/HTTP/zipball/a2af88ac6d3631932b67d263f88d0d6f19361ff9",
+                "reference": "a2af88ac6d3631932b67d263f88d0d6f19361ff9",
                 "shasum": ""
             },
             "require": {
@@ -605,7 +645,7 @@
                 "request",
                 "response"
             ],
-            "time": "2013-06-10 11:24:18"
+            "time": "2013-09-12 08:30:48"
         },
         {
             "name": "sugiphp/logger",
@@ -740,12 +780,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Process.git",
-                "reference": "a738a85b75f26b59fb7d1fdbb4112b5954a66fc1"
+                "reference": "c1b7251f873f960c32f79ad264268ca82158bafd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Process/zipball/a738a85b75f26b59fb7d1fdbb4112b5954a66fc1",
-                "reference": "a738a85b75f26b59fb7d1fdbb4112b5954a66fc1",
+                "url": "https://api.github.com/repos/symfony/Process/zipball/c1b7251f873f960c32f79ad264268ca82158bafd",
+                "reference": "c1b7251f873f960c32f79ad264268ca82158bafd",
                 "shasum": ""
             },
             "require": {
@@ -778,7 +818,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "http://symfony.com",
-            "time": "2013-08-22 06:44:20"
+            "time": "2013-09-19 09:47:34"
         },
         {
             "name": "symfony/yaml",
@@ -787,12 +827,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Yaml.git",
-                "reference": "29b78f7793b07d6bb5e2aabf3b237eb230d61dfa"
+                "reference": "bb697b6617b90c91b2a65d24ce32035afe5e3418"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Yaml/zipball/29b78f7793b07d6bb5e2aabf3b237eb230d61dfa",
-                "reference": "29b78f7793b07d6bb5e2aabf3b237eb230d61dfa",
+                "url": "https://api.github.com/repos/symfony/Yaml/zipball/bb697b6617b90c91b2a65d24ce32035afe5e3418",
+                "reference": "bb697b6617b90c91b2a65d24ce32035afe5e3418",
                 "shasum": ""
             },
             "require": {
@@ -825,7 +865,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "http://symfony.com",
-            "time": "2013-08-22 13:12:42"
+            "time": "2013-09-22 17:30:19"
         },
         {
             "name": "tedivm/jshrink",
@@ -885,7 +925,8 @@
         "sugiphp/http": 20,
         "sugiphp/routing": 20,
         "sugiphp/assets": 20,
-        "sugiphp/filesystem": 20
+        "sugiphp/filesystem": 20,
+        "sugiphp/cron": 20
     },
     "platform": {
         "php": ">=5.3"
