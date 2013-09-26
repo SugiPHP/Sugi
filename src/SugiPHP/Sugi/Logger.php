@@ -107,6 +107,9 @@ class Logger
 		// create a handler
 		if ($type == "file") {
 			$handler = new StreamHandler($config["filename"]);
+			if (!empty($config["filemode"]) and !file_exists($config["filename"])) {
+				@touch($config["filename"]) and @chmod($config["filename"], $config["filemode"]);
+			}
 			// format
 			$format = isset($config["format"]) ? $config["format"] : null;
 			$handler->setFormatter(new Logger\Formatter\LineFormatter($format));
