@@ -16,28 +16,28 @@ class Router
 {
 	/**
 	 * Router instance.
-	 * 
+	 *
 	 * @var SugiPHP\Routing\Router
 	 */
 	protected static $router;
 
 	/**
 	 * Registered functions/closures attached to each route.
-	 * 
+	 *
 	 * @var array Array of Closures
 	 */
 	protected static $callables = array();
 
 	/**
 	 * Returned array for the route that matched the request.
-	 * 
+	 *
 	 * @var array|null NULL if no route matches request or the method match was not executed
 	 */
 	protected static $match;
 
 	/**
 	 * Gets the instance of SugiPHP\Routing\Router.
-	 * 
+	 *
 	 * @return SugiPHP\Routing\Router
 	 */
 	public static function getInstance()
@@ -48,21 +48,21 @@ class Router
 			if ($routes) {
 				foreach ($routes as $name => $route) {
 					static::add(
-						$name, 
-						$route["path"], 
-						isset($route["defaults"]) ? $route["defaults"] : array(), 
+						$name,
+						$route["path"],
+						isset($route["defaults"]) ? $route["defaults"] : array(),
 						isset($route["requisites"]) ? $route["requisites"] : array()
 					);
 				}
 			}
 		}
-		
+
 		return static::$router;
 	}
 
 	/**
 	 * Creates a route and adds it in the registered routes.
-	 * 
+	 *
 	 * @param  string  $name Route's name
 	 * @param  string  $path
 	 * @param  array   $defaults
@@ -83,9 +83,9 @@ class Router
 	}
 
 	/**
-	 * Walks through all registered routes and returns first route that matches 
+	 * Walks through all registered routes and returns first route that matches
 	 * the given parameters. If the route was added with a closure it will be executed.
-	 * 
+	 *
 	 * @param  SugiPHP\HTTP\Request $request
 	 * @return array|null
 	 */
@@ -125,7 +125,7 @@ class Router
 
 	/**
 	 * Returns all request variables.
-	 * 
+	 *
 	 * @return array
 	 */
 	public static function getParams()
@@ -135,7 +135,7 @@ class Router
 
 	/**
 	 * Returns variable that matches current route.
-	 * 
+	 *
 	 * @param  string $param Parameter (variable) name
 	 * @return mixed
 	 */
@@ -146,7 +146,7 @@ class Router
 
 	/**
 	 * Returns current route.
-	 * 
+	 *
 	 * @return \SugiPHP\Routing\Route
 	 */
 	public static function getRoute()
@@ -156,8 +156,16 @@ class Router
 
 	/**
 	 * Returns the name of the current route.
-	 * 
+	 *
 	 * @return string
+	 */
+	public static function getRouteName()
+	{
+		return static::getParam("_name");
+	}
+
+	/**
+	 * @deprecated use getRouteName()
 	 */
 	public static function getName()
 	{

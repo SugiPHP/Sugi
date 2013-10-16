@@ -14,7 +14,7 @@ class URI
 {
 	/**
 	 * Builds an URL based on route with name $name.
-	 * 
+	 *
 	 * @param  string $name
 	 * @param  array  $params
 	 * @return string
@@ -22,37 +22,41 @@ class URI
 	public static function build($name, array $params = array())
 	{
 		$router = Router::getInstance();
-		return $router->get($name)->build($params);
+
+		return $router->build($name, $params);
 	}
 
 	/**
 	 * Builds and URL based on the current route.
-	 * 
+	 *
 	 * @param  array  $params Parameters that should be set
 	 * @return string
 	 */
-	public static function current(array $params)
+	public static function current(array $params = array())
 	{
-		return Router::getRoute()->build($params);
+		$router = Router::getInstance();
+
+		return $router->build(Router::getRouteName(), $params);
 	}
 
 	/**
 	 * Builds and URL based on current route and using current request as default,
 	 * modifying those parameters that are given.
-	 * 
+	 *
 	 * @param  array  $params Parameters that should be changed
 	 * @return string
 	 */
 	public static function modify(array $params)
 	{
-		$build_params = array();
+		$router = Router::getInstance();
 
+		$build_params = array();
 		foreach (Router::getParams() as $param => $value) {
 			if ($param !== "_name") {
 				$build_params[$param] = isset($params[$param]) ? $params[$param] : $value;
 			}
 		}
 
-		return Router::getRoute()->build($build_params);
+		return $router->build(Router::getRouteName(), $build_params);
 	}
 }
