@@ -8,8 +8,6 @@
 
 namespace SugiPHP\Sugi;
 
-use SugiPHP\Sugi\Router;
-use SugiPHP\Sugi\Request;
 use SugiPHP\Routing\Route;
 
 class URI
@@ -21,20 +19,9 @@ class URI
 	 * @param  array  $params
 	 * @return string
 	 */
-	public static function build($name, array $params = array(), $pathType = Route::PATH_ONLY)
+	public static function build($name, array $params = array(), $pathType = Route::PATH_AUTO)
 	{
 		$router = Router::getInstance();
-
-		if ($pathType == Route::PATH_FULL or $pathType == Route::PATH_NETWORK) {
-			$route = Router::getRoute($name);
-			if (!isset($params["_host"]) and !$route->getHost()) {
-				$params["_host"] = Request::getHost();
-			}
-
-			if (!isset($params["_scheme"]) and !$route->getScheme()) {
-				$params["_scheme"] = Request::getScheme();
-			}
-		}
 
 		return $router->build($name, $params, $pathType);
 	}
