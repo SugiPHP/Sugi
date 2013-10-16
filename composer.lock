@@ -693,12 +693,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SugiPHP/Routing.git",
-                "reference": "27ba8a9969ba928af15be241f85e639ae5ebe130"
+                "reference": "7b14d7fc3877c9c207d29b2aed1d18ff201e57ab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SugiPHP/Routing/zipball/27ba8a9969ba928af15be241f85e639ae5ebe130",
-                "reference": "27ba8a9969ba928af15be241f85e639ae5ebe130",
+                "url": "https://api.github.com/repos/SugiPHP/Routing/zipball/7b14d7fc3877c9c207d29b2aed1d18ff201e57ab",
+                "reference": "7b14d7fc3877c9c207d29b2aed1d18ff201e57ab",
                 "shasum": ""
             },
             "require": {
@@ -722,7 +722,7 @@
             "keywords": [
                 "route"
             ],
-            "time": "2013-10-16 07:47:53"
+            "time": "2013-10-16 12:51:58"
         },
         {
             "name": "swiftmailer/swiftmailer",

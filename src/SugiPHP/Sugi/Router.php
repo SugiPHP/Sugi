@@ -145,13 +145,18 @@ class Router
 	}
 
 	/**
-	 * Returns current route.
+	 * Returns current route if no name is given, otherwise returns named route.
 	 *
+	 * @param  string Route name. Default is false, which means to return current route.
 	 * @return \SugiPHP\Routing\Route
 	 */
-	public static function getRoute()
+	public static function getRoute($name = false)
 	{
-		return static::$router->get(static::getName());
+		if (!$name) {
+			$name = static::getName();
+		}
+
+		return static::$router->get($name);
 	}
 
 	/**
