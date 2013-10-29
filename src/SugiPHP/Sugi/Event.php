@@ -15,7 +15,7 @@ class Event extends Dispatcher
 {
 	/**
 	 * Instance of SugiPHP\Events\Dispatcher
-	 * 
+	 *
 	 * @var SugiPHP\Events\Dispatcher
 	 */
 	protected static $dispatcher;
@@ -25,27 +25,33 @@ class Event extends Dispatcher
 		if (!static::$dispatcher) {
 			static::$dispatcher = new Dispatcher();
 		}
-		
+
 		return static::$dispatcher;
 	}
 
 	/**
-	 * Registers an event listener
-	 * 
-	 * @param  string $eventName
-	 * @param  function $callback
+	 * Registers an event listener(s).
+	 *
+	 * @param string|array $eventName or array of event names
+	 * @param function $callback
 	 */
 	public static function listen($eventName, $callback)
 	{
 		$instance = static::getInstance();
-		$instance->addListener($eventName, $callback);
+		if (is_array($eventName)) {
+			foreach ($eventName as $en) {
+				$instance->addListener($en, $callback);
+			}
+		} else {
+			$instance->addListener($eventName, $callback);
+		}
 	}
 
 	/**
 	 * Fires an event.
-	 * 
-	 * @param  string $eventName
-	 * @param  array  $params
+	 *
+	 * @param string $eventName
+	 * @param array $params
 	 */
 	public static function fire($eventName, array $params = array())
 	{

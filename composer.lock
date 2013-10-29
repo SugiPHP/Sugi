@@ -534,12 +534,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SugiPHP/Events.git",
-                "reference": "be678f8b4d48dbc9e6024cd855aaa4b9813fa6ea"
+                "reference": "ee667227101f6eb80c1eb06ca3ef50daa66c79f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SugiPHP/Events/zipball/be678f8b4d48dbc9e6024cd855aaa4b9813fa6ea",
-                "reference": "be678f8b4d48dbc9e6024cd855aaa4b9813fa6ea",
+                "url": "https://api.github.com/repos/SugiPHP/Events/zipball/ee667227101f6eb80c1eb06ca3ef50daa66c79f9",
+                "reference": "ee667227101f6eb80c1eb06ca3ef50daa66c79f9",
                 "shasum": ""
             },
             "require": {
@@ -565,7 +565,7 @@
                 "event",
                 "observer"
             ],
-            "time": "2013-04-03 13:37:45"
+            "time": "2013-10-29 08:18:12"
         },
         {
             "name": "sugiphp/filesystem",
