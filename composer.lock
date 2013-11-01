@@ -312,12 +312,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SugiPHP/Assets.git",
-                "reference": "116efd23473e4359ae58222a68acba3bfb4fff84"
+                "reference": "5f6412e005926507c0cabfc838b7f60565926c9a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SugiPHP/Assets/zipball/116efd23473e4359ae58222a68acba3bfb4fff84",
-                "reference": "116efd23473e4359ae58222a68acba3bfb4fff84",
+                "url": "https://api.github.com/repos/SugiPHP/Assets/zipball/5f6412e005926507c0cabfc838b7f60565926c9a",
+                "reference": "5f6412e005926507c0cabfc838b7f60565926c9a",
                 "shasum": ""
             },
             "require": {
@@ -354,7 +354,7 @@
                 "javascript",
                 "less"
             ],
-            "time": "2013-08-22 12:54:54"
+            "time": "2013-11-01 15:58:15"
         },
         {
             "name": "sugiphp/cache",
