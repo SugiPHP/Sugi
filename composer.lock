@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "f746dc1257325a75424a1e0b04fefc31",
+    "hash": "34048390da03e82a327618cd18c5d161",
     "packages": [
         {
             "name": "kriswallsmith/assetic",
@@ -222,63 +222,17 @@
             "time": "2013-07-02 20:53:35"
         },
         {
-            "name": "pimple/pimple",
-            "version": "v1.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/fabpot/Pimple.git",
-                "reference": "ae11e57e8c2bb414b2ff93396dbbfc0eb92feb94"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Pimple/zipball/ae11e57e8c2bb414b2ff93396dbbfc0eb92feb94",
-                "reference": "ae11e57e8c2bb414b2ff93396dbbfc0eb92feb94",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Pimple": "lib/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                }
-            ],
-            "description": "Pimple is a simple Dependency Injection Container for PHP 5.3",
-            "homepage": "http://pimple.sensiolabs.org",
-            "keywords": [
-                "container",
-                "dependency injection"
-            ],
-            "time": "2013-03-08 08:21:40"
-        },
-        {
             "name": "psr/log",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "65f363ac44058796a8e1428cf41e6d92d8a75ddc"
+                "reference": "a78d6504ff5d4367497785ab2ade91db3a9fbe11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/65f363ac44058796a8e1428cf41e6d92d8a75ddc",
-                "reference": "65f363ac44058796a8e1428cf41e6d92d8a75ddc",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/a78d6504ff5d4367497785ab2ade91db3a9fbe11",
+                "reference": "a78d6504ff5d4367497785ab2ade91db3a9fbe11",
                 "shasum": ""
             },
             "type": "library",
@@ -308,7 +262,7 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2013-12-25 11:17:50"
+            "time": "2014-01-18 15:33:09"
         },
         {
             "name": "sugiphp/assets",
@@ -368,12 +322,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SugiPHP/Cache.git",
-                "reference": "54634e7df0ba3cd1aea295de81279a4867cab3f0"
+                "reference": "33f57e104fe071dd1dc695099efb0f35a3310c9f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SugiPHP/Cache/zipball/54634e7df0ba3cd1aea295de81279a4867cab3f0",
-                "reference": "54634e7df0ba3cd1aea295de81279a4867cab3f0",
+                "url": "https://api.github.com/repos/SugiPHP/Cache/zipball/33f57e104fe071dd1dc695099efb0f35a3310c9f",
+                "reference": "33f57e104fe071dd1dc695099efb0f35a3310c9f",
                 "shasum": ""
             },
             "require": {
@@ -403,7 +357,7 @@
                 "memcache",
                 "sugiphp"
             ],
-            "time": "2013-04-23 06:20:13"
+            "time": "2014-01-02 12:54:33"
         },
         {
             "name": "sugiphp/config",
@@ -449,6 +403,48 @@
                 "sugiphp"
             ],
             "time": "2013-12-13 08:37:10"
+        },
+        {
+            "name": "sugiphp/container",
+            "version": "dev-master",
+            "target-dir": "SugiPHP/Container",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SugiPHP/Container.git",
+                "reference": "2b75a124c7730417d9e6088d0a09350c7572bef5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SugiPHP/Container/zipball/2b75a124c7730417d9e6088d0a09350c7572bef5",
+                "reference": "2b75a124c7730417d9e6088d0a09350c7572bef5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "SugiPHP\\Container\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Plamen Popov",
+                    "email": "tzappa@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "SugiPHP Container Component",
+            "keywords": [
+                "container",
+                "sugiphp"
+            ],
+            "time": "2014-01-24 12:28:12"
         },
         {
             "name": "sugiphp/cron",
@@ -785,12 +781,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Process.git",
-                "reference": "a7fdd976ddea87a0354674eebf45251b4a8ce905"
+                "reference": "d4b086ca4d6e192d8c2c64fe011159c8bc4c9daa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Process/zipball/a7fdd976ddea87a0354674eebf45251b4a8ce905",
-                "reference": "a7fdd976ddea87a0354674eebf45251b4a8ce905",
+                "url": "https://api.github.com/repos/symfony/Process/zipball/d4b086ca4d6e192d8c2c64fe011159c8bc4c9daa",
+                "reference": "d4b086ca4d6e192d8c2c64fe011159c8bc4c9daa",
                 "shasum": ""
             },
             "require": {
@@ -823,7 +819,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "http://symfony.com",
-            "time": "2013-12-29 14:45:01"
+            "time": "2014-01-07 13:29:57"
         },
         {
             "name": "symfony/yaml",
@@ -874,16 +870,16 @@
         },
         {
             "name": "tedivm/jshrink",
-            "version": "v0.5.1",
+            "version": "v0.5.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/tedivm/JShrink",
-                "reference": "v0.5.1"
+                "url": "https://github.com/tedivm/JShrink.git",
+                "reference": "4b48e3d051cf0ab145db9df20d3292d91485bb60"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/tedivm/JShrink/archive/v0.5.1.zip",
-                "reference": "v0.5.1",
+                "url": "https://api.github.com/repos/tedivm/JShrink/zipball/4b48e3d051cf0ab145db9df20d3292d91485bb60",
+                "reference": "4b48e3d051cf0ab145db9df20d3292d91485bb60",
                 "shasum": ""
             },
             "require": {
@@ -911,7 +907,7 @@
                 "javascript",
                 "minifier"
             ],
-            "time": "2012-11-26 04:48:55"
+            "time": "2014-01-14 22:23:53"
         }
     ],
     "packages-dev": [
@@ -931,7 +927,8 @@
         "sugiphp/routing": 20,
         "sugiphp/assets": 20,
         "sugiphp/filesystem": 20,
-        "sugiphp/cron": 20
+        "sugiphp/cron": 20,
+        "sugiphp/container": 20
     },
     "platform": {
         "php": ">=5.3"

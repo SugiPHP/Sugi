@@ -8,46 +8,38 @@
 
 namespace SugiPHP\Sugi;
 
-use Pimple;
+use SugiPHP\Container\Container as BaseContainer;
 
-class Container extends Pimple
+/**
+ * Facade for a SugiPHP Container
+ */
+class Container
 {
-	protected static $pimple;
+	/**
+	 * Instance of a SugiPHP\Container\Container
+	 */
+	protected static $container;
+
+	/**
+	 * Handles dynamic static calls to the object.
+	 *
+	 * @param  string $method
+	 * @param  array $parameters
+	 * @return mixed
+	 */
+	public static function __callStatic($method, $parameters)
+	{
+		$instance = static::getInstance();
+
+		return call_user_func_array(array($instance, $method), $parameters);
+	}
 
 	public static function getInstance()
 	{
-		if ( ! static::$pimple) {
-			static::$pimple = new Pimple();
+		if ( ! static::$container) {
+			static::$container = new BaseContainer();
 		}
 
-		return static::$pimple;
-	}
-
-	public static function get($id)
-	{
-		$container = static::getInstance();
-
-		return $container->offsetGet($id);
-	}
-
-	public static function set($id, $value)
-	{
-		$container = static::getInstance();
-
-		$container->offsetSet($id, $value);
-	}
-
-	public static function has($id)
-	{
-		$container = static::getInstance();
-
-		return $container->offsetExists($id);
-	}
-
-	public static function delete($id)
-	{
-		$container = static::getInstance();
-
-		return $container->offsetUnset($id);
+		return static::$container;
 	}
 }

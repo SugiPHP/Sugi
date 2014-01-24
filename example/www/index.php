@@ -1,12 +1,14 @@
 <?php
 /**
  * Base entrance point
- * 
+ *
  * @package    SugiPHP
  * @subpackage Sugi
  */
 
 namespace App;
+
+date_default_timezone_set("Europe/Sofia");
 
 use SugiPHP\Sugi\Config;
 use SugiPHP\Sugi\Logger;
@@ -47,7 +49,7 @@ include "../../vendor/autoload.php";
 
 // TODO:
 // 	STOPWATCH
-//  DIR 
+//  DIR
 // 	FILTER
 // 	SESSION
 // 	IMAGE PROCESSING - Imagine
@@ -64,11 +66,11 @@ Logger::log("nsbop", "someone's testing");
 
 // CONTAINER
 $c = Container::getInstance();
-$c["db"] = Container::share(function ($c) {
-	echo "connecting to DB";
+$c["db"] = function() {
+	echo "connecting to DB<br />";
 
 	$config = Config::get("database");
-	// The Data Source Name, or DSN, contains the information required to connect to the database. 
+	// The Data Source Name, or DSN, contains the information required to connect to the database.
 	if (isset($config["dsn"])) {
 		$dsn = $config["dsn"];
 	} else {
@@ -91,7 +93,7 @@ $c["db"] = Container::share(function ($c) {
 	$pass = isset($config["pass"]) ? $config["pass"] : "";
 
 	return new \PDO($dsn, $user, $pass);
-});
+};
 
 // PDO
 $db = $c["db"]; // container will initialize PDO driver
