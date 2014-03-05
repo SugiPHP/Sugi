@@ -322,12 +322,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SugiPHP/Cache.git",
-                "reference": "33f57e104fe071dd1dc695099efb0f35a3310c9f"
+                "reference": "af7af4aee4350fd66976aa0818e201ce3a09079d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SugiPHP/Cache/zipball/33f57e104fe071dd1dc695099efb0f35a3310c9f",
-                "reference": "33f57e104fe071dd1dc695099efb0f35a3310c9f",
+                "url": "https://api.github.com/repos/SugiPHP/Cache/zipball/af7af4aee4350fd66976aa0818e201ce3a09079d",
+                "reference": "af7af4aee4350fd66976aa0818e201ce3a09079d",
                 "shasum": ""
             },
             "require": {
@@ -357,7 +357,7 @@
                 "memcache",
                 "sugiphp"
             ],
-            "time": "2014-01-02 12:54:33"
+            "time": "2014-02-03 12:29:31"
         },
         {
             "name": "sugiphp/config",
@@ -493,12 +493,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SugiPHP/Database.git",
-                "reference": "73d5a82786786e9a7406ddd523ad830d5801a148"
+                "reference": "431bced6596c8948e9a7ad9c6fc2c0854fc6c4e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SugiPHP/Database/zipball/73d5a82786786e9a7406ddd523ad830d5801a148",
-                "reference": "73d5a82786786e9a7406ddd523ad830d5801a148",
+                "url": "https://api.github.com/repos/SugiPHP/Database/zipball/431bced6596c8948e9a7ad9c6fc2c0854fc6c4e7",
+                "reference": "431bced6596c8948e9a7ad9c6fc2c0854fc6c4e7",
                 "shasum": ""
             },
             "require": {
@@ -526,7 +526,7 @@
                 "pgsql",
                 "sqlite"
             ],
-            "time": "2013-06-19 09:01:13"
+            "time": "2014-02-05 12:43:01"
         },
         {
             "name": "sugiphp/events",
@@ -615,12 +615,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SugiPHP/HTTP.git",
-                "reference": "a2af88ac6d3631932b67d263f88d0d6f19361ff9"
+                "reference": "17979ac533100f55d565f21ef2f0c722f7443efe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SugiPHP/HTTP/zipball/a2af88ac6d3631932b67d263f88d0d6f19361ff9",
-                "reference": "a2af88ac6d3631932b67d263f88d0d6f19361ff9",
+                "url": "https://api.github.com/repos/SugiPHP/HTTP/zipball/17979ac533100f55d565f21ef2f0c722f7443efe",
+                "reference": "17979ac533100f55d565f21ef2f0c722f7443efe",
                 "shasum": ""
             },
             "require": {
@@ -646,7 +646,7 @@
                 "request",
                 "response"
             ],
-            "time": "2013-09-12 08:30:48"
+            "time": "2014-02-21 08:53:01"
         },
         {
             "name": "sugiphp/logger",
@@ -781,12 +781,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Process.git",
-                "reference": "d4b086ca4d6e192d8c2c64fe011159c8bc4c9daa"
+                "reference": "0ae3bf5ff90edbe6e30e645221646479c2f1ef54"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Process/zipball/d4b086ca4d6e192d8c2c64fe011159c8bc4c9daa",
-                "reference": "d4b086ca4d6e192d8c2c64fe011159c8bc4c9daa",
+                "url": "https://api.github.com/repos/symfony/Process/zipball/0ae3bf5ff90edbe6e30e645221646479c2f1ef54",
+                "reference": "0ae3bf5ff90edbe6e30e645221646479c2f1ef54",
                 "shasum": ""
             },
             "require": {
@@ -810,7 +810,9 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
                 },
                 {
                     "name": "Symfony Community",
@@ -819,7 +821,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "http://symfony.com",
-            "time": "2014-01-07 13:29:57"
+            "time": "2014-02-24 16:21:51"
         },
         {
             "name": "symfony/yaml",

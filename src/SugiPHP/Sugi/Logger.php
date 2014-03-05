@@ -37,13 +37,13 @@ class Logger
 		if (!static::$monolog) {
 			static::$monolog = static::factory(Config::get("logger"));
 		}
-		
+
 		return static::$monolog;
 	}
 
 	/**
 	 * Extending log method, since it might be in an old format
-	 * 
+	 *
 	 * @param  string $level
 	 * @param  string $message
 	 */
@@ -61,34 +61,27 @@ class Logger
 		}
 	}
 
-	public static function factory(array $params)
+	public static function factory($params = array())
 	{
 		$monolog = new BaseLogger();
 		$monolog->pushProcessor(function ($message) {
-			// TODO: this should be in \Request or something...
-			if (PHP_SAPI == "cli") {
-				$ip = "cli"; // The request was started from the command line
-			} elseif (isset($_SERVER["HTTP_X_FORWARDED_FOR"])) {
-				$ip = $_SERVER["HTTP_X_FORWARDED_FOR"]; // If the server is behind proxy
-			} elseif (isset($_SERVER["HTTP_CLIENT_IP"])) {
-				$ip = $_SERVER["HTTP_CLIENT_IP"];
-			} elseif (isset($_SERVER["REMOTE_ADDR"])) {
-				$ip = $_SERVER["REMOTE_ADDR"];
-			}
-			$message["extra"]["ip"] = $ip;
+			// Adding extra IP
+			$message["extra"]["ip"] = Request::getClientIp();
 
 			return $message;
 		});
-		if (isset($params["type"])) {
-			$handler = static::createHandler($params);
-			$filter = (isset($params["filter"])) ? $params["filter"] : "all";
-			$monolog->addHandler($handler, $filter);
-		}
-		else {
-			foreach ($params as $param) {
-				$handler = static::createHandler($param);
-				$filter = (isset($param["filter"])) ? $param["filter"] : "all";
+
+		if (!empty($params)) {
+			if (isset($params["type"])) {
+				$handler = static::createHandler($params);
+				$filter = (isset($params["filter"])) ? $params["filter"] : "all";
 				$monolog->addHandler($handler, $filter);
+			} else {
+				foreach ($params as $param) {
+					$handler = static::createHandler($param);
+					$filter = (isset($param["filter"])) ? $param["filter"] : "all";
+					$monolog->addHandler($handler, $filter);
+				}
 			}
 		}
 
