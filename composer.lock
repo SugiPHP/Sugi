@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "34048390da03e82a327618cd18c5d161",
+    "hash": "c6ace00343c4a36b3a61652d3029ba8a",
     "packages": [
         {
             "name": "kriswallsmith/assetic",
@@ -581,12 +581,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SugiPHP/FileSystem.git",
-                "reference": "ca4a680585ca43ebc7eb062a43c7621eb4fd6020"
+                "reference": "da6a5c67ea0e57b1b926e0631da3e9252876a529"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SugiPHP/FileSystem/zipball/ca4a680585ca43ebc7eb062a43c7621eb4fd6020",
-                "reference": "ca4a680585ca43ebc7eb062a43c7621eb4fd6020",
+                "url": "https://api.github.com/repos/SugiPHP/FileSystem/zipball/da6a5c67ea0e57b1b926e0631da3e9252876a529",
+                "reference": "da6a5c67ea0e57b1b926e0631da3e9252876a529",
                 "shasum": ""
             },
             "require": {
@@ -612,7 +612,47 @@
                 "files",
                 "filesystem"
             ],
-            "time": "2013-04-20 21:06:53"
+            "time": "2014-04-07 11:06:05"
+        },
+        {
+            "name": "sugiphp/filter",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SugiPHP/Filter.git",
+                "reference": "bc21e6aef46010766b54ee6314e1dafa6f681d8d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SugiPHP/Filter/zipball/bc21e6aef46010766b54ee6314e1dafa6f681d8d",
+                "reference": "bc21e6aef46010766b54ee6314e1dafa6f681d8d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SugiPHP\\Filter\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Plamen Popov",
+                    "email": "tzappa@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Filter helper functions",
+            "keywords": [
+                "filter"
+            ],
+            "time": "2014-04-08 13:38:49"
         },
         {
             "name": "sugiphp/http",
@@ -936,7 +976,8 @@
         "sugiphp/assets": 20,
         "sugiphp/filesystem": 20,
         "sugiphp/cron": 20,
-        "sugiphp/container": 20
+        "sugiphp/container": 20,
+        "sugiphp/filter": 20
     },
     "platform": {
         "php": ">=5.3"

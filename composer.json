@@ -20,6 +20,7 @@
         "sugiphp/filesystem": "dev-master",
         "sugiphp/cron": "dev-master",
         "sugiphp/container": "dev-master",
+        "sugiphp/filter": "dev-master",
         "symfony/yaml": "2.2.*",
         "leafo/lessphp": "0.3.*",
         "swiftmailer/swiftmailer": "4.3.*"
