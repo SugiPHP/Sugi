@@ -26,10 +26,9 @@
         "swiftmailer/swiftmailer": "4.3.*"
     },
     "autoload": {
-        "psr-0": {
+        "psr-4": {
             "SugiPHP\\Sugi": "src/"
         }
     },
-    "target-dir": "",
     "minimum-stability": "dev"
 }
