@@ -119,43 +119,49 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "1.4.1",
+            "version": "1.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "1.4.1"
+                "reference": "65026b610f8c19e61d7242f600530677b0466aac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/1.4.1",
-                "reference": "1.4.1",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/65026b610f8c19e61d7242f600530677b0466aac",
+                "reference": "65026b610f8c19e61d7242f600530677b0466aac",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0",
-                "psr/log": ">=1.0,<2.0"
+                "psr/log": "~1.0"
             },
             "require-dev": {
-                "doctrine/couchdb": "dev-master",
-                "mlehner/gelf-php": "1.0.*",
-                "raven/raven": "0.3.*"
+                "aws/aws-sdk-php": "~2.4, >2.4.8",
+                "doctrine/couchdb": "~1.0@dev",
+                "graylog2/gelf-php": "~1.0",
+                "phpunit/phpunit": "~3.7.0",
+                "raven/raven": "~0.5",
+                "ruflin/elastica": "0.90.*"
             },
             "suggest": {
+                "aws/aws-sdk-php": "Allow sending log messages to AWS services like DynamoDB",
                 "doctrine/couchdb": "Allow sending log messages to a CouchDB server",
                 "ext-amqp": "Allow sending log messages to an AMQP server (1.0+ required)",
                 "ext-mongo": "Allow sending log messages to a MongoDB server",
-                "mlehner/gelf-php": "Allow sending log messages to a GrayLog2 server",
-                "raven/raven": "Allow sending log messages to a Sentry server"
+                "graylog2/gelf-php": "Allow sending log messages to a GrayLog2 server",
+                "raven/raven": "Allow sending log messages to a Sentry server",
+                "rollbar/rollbar": "Allow sending log messages to Rollbar",
+                "ruflin/elastica": "Allow sending log messages to an Elastic Search server"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.4.x-dev"
+                    "dev-master": "1.9.x-dev"
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Monolog": "src/"
+                "psr-4": {
+                    "Monolog\\": "src/Monolog"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -177,7 +183,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2013-04-01 10:04:58"
+            "time": "2014-04-24 13:29:03"
         },
         {
             "name": "natxet/CssMin",
@@ -707,16 +713,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SugiPHP/Logger.git",
-                "reference": "8f69816fac2ec8b001be52a51351f8fc0b069c34"
+                "reference": "f5505952ac9e67b7a7c3f0acdf1c9a1966643492"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SugiPHP/Logger/zipball/8f69816fac2ec8b001be52a51351f8fc0b069c34",
-                "reference": "8f69816fac2ec8b001be52a51351f8fc0b069c34",
+                "url": "https://api.github.com/repos/SugiPHP/Logger/zipball/f5505952ac9e67b7a7c3f0acdf1c9a1966643492",
+                "reference": "f5505952ac9e67b7a7c3f0acdf1c9a1966643492",
                 "shasum": ""
             },
             "require": {
-                "monolog/monolog": "1.4.*",
+                "monolog/monolog": "1.9.1",
                 "php": ">=5.3"
             },
             "type": "library",
@@ -740,7 +746,7 @@
                 "log",
                 "logging"
             ],
-            "time": "2014-04-28 11:56:31"
+            "time": "2014-04-28 13:06:32"
         },
         {
             "name": "sugiphp/routing",
