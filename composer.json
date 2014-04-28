@@ -1,6 +1,8 @@
 {
     "name": "sugiphp/sugi",
     "type": "library",
+    "description": "SugiPHP Component Bundle",
+    "license": "MIT",
     "authors": [
         {
             "name": "Plamen Popov",
@@ -27,7 +29,7 @@
     },
     "autoload": {
         "psr-4": {
-            "SugiPHP\\Sugi": "src/"
+            "SugiPHP\\Sugi\\": "src/"
         }
     },
     "minimum-stability": "dev"
