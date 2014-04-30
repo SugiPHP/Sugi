@@ -56,6 +56,9 @@ class Event extends Dispatcher
 	public static function fire($eventName, array $params = array())
 	{
 		$instance = static::getInstance();
-		$instance->dispatch(new BaseEvent($eventName, $params));
+		$e = new BaseEvent($eventName, $params);
+		$instance->dispatch($e);
+
+		return $e;
 	}
 }
