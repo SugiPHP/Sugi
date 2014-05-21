@@ -15,16 +15,18 @@ use SugiPHP\Config\YamlLoader;
 
 class Config
 {
+	public static $fileLocator;
+
 	/**
 	 * FileLocator search path.
-	 * 
+	 *
 	 * @var string|array
 	 */
 	public static $path = "config";
 
 	/**
 	 * Instance of SugiPHP\Config\Config.
-	 * 
+	 *
 	 * @var SugiPHP\Config\Config
 	 */
 	protected static $config;
@@ -46,12 +48,51 @@ class Config
 	public static function getInstance()
 	{
 		if (!static::$config) {
-			$fileLocator = new FileLocator(static::$path);
-			$nativeLoader = new NativeLoader($fileLocator);
-			$yamlLoader = new YamlLoader($fileLocator);
+			if (!static::$fileLocator) {
+				static::$fileLocator = new FileLocator(static::$path);
+			}
+
+			$nativeLoader = new NativeLoader(static::$fileLocator);
+			$yamlLoader = new YamlLoader(static::$fileLocator);
 			static::$config = new BaseConfig(array($nativeLoader, $yamlLoader));
 		}
 
 		return static::$config;
+	}
+
+	/**
+	 * Adds a search paths.
+	 *
+	 * @param string|array $path or several paths
+	 */
+	public static function addPath($path)
+	{
+		return static::$fileLocator->addPath($path);
+	}
+
+	/**
+	 * Remove last search path.
+	 */
+	public static function popPath()
+	{
+		return static::$fileLocator->popPath();
+	}
+
+	/**
+	 * Prepend one path to the beginning of the search paths.
+	 *
+	 * @param string $path
+	 */
+	public static function unshiftPath($path)
+	{
+		return static::$fileLocator->unshiftPath($path);
+	}
+
+	/**
+	 * Remove first path from the search paths.
+	 */
+	public static function shiftPath()
+	{
+		return static::$fileLocator->shiftPath();
 	}
 }

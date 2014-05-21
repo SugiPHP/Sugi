@@ -369,12 +369,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SugiPHP/Config.git",
-                "reference": "5f2bbbe5efa36d42970606f5110a864cfe46dbd7"
+                "reference": "979aedafc1a5966a99da9a5be074a9f1b7065d29"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SugiPHP/Config/zipball/5f2bbbe5efa36d42970606f5110a864cfe46dbd7",
-                "reference": "5f2bbbe5efa36d42970606f5110a864cfe46dbd7",
+                "url": "https://api.github.com/repos/SugiPHP/Config/zipball/979aedafc1a5966a99da9a5be074a9f1b7065d29",
+                "reference": "979aedafc1a5966a99da9a5be074a9f1b7065d29",
                 "shasum": ""
             },
             "require": {
@@ -413,7 +413,7 @@
                 "xml",
                 "yaml"
             ],
-            "time": "2014-04-30 13:33:58"
+            "time": "2014-05-21 11:28:39"
         },
         {
             "name": "sugiphp/container",
