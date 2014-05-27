@@ -83,9 +83,9 @@ class Config
 	 *
 	 * @param string $path
 	 */
-	public static function unshiftPath($path)
+	public static function prependPath($path)
 	{
-		return static::$fileLocator->unshiftPath($path);
+		return static::$fileLocator->prependPath($path);
 	}
 
 	/**

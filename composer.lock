@@ -369,12 +369,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SugiPHP/Config.git",
-                "reference": "979aedafc1a5966a99da9a5be074a9f1b7065d29"
+                "reference": "b76a059f3feecfe722ecc5b0f03cc758d394d070"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SugiPHP/Config/zipball/979aedafc1a5966a99da9a5be074a9f1b7065d29",
-                "reference": "979aedafc1a5966a99da9a5be074a9f1b7065d29",
+                "url": "https://api.github.com/repos/SugiPHP/Config/zipball/b76a059f3feecfe722ecc5b0f03cc758d394d070",
+                "reference": "b76a059f3feecfe722ecc5b0f03cc758d394d070",
                 "shasum": ""
             },
             "require": {
@@ -413,7 +413,7 @@
                 "xml",
                 "yaml"
             ],
-            "time": "2014-05-21 11:28:39"
+            "time": "2014-05-27 09:21:31"
         },
         {
             "name": "sugiphp/container",
@@ -844,12 +844,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Process.git",
-                "reference": "8a3edace8e8aabed8992b993bfc13df3b1e836f2"
+                "reference": "e4b5fcd31ce60a0721fb36d6478de0185afe744b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Process/zipball/8a3edace8e8aabed8992b993bfc13df3b1e836f2",
-                "reference": "8a3edace8e8aabed8992b993bfc13df3b1e836f2",
+                "url": "https://api.github.com/repos/symfony/Process/zipball/e4b5fcd31ce60a0721fb36d6478de0185afe744b",
+                "reference": "e4b5fcd31ce60a0721fb36d6478de0185afe744b",
                 "shasum": ""
             },
             "require": {
@@ -858,7 +858,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.5-dev"
+                    "dev-master": "2.6-dev"
                 }
             },
             "autoload": {
@@ -884,7 +884,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "http://symfony.com",
-            "time": "2014-04-28 05:15:04"
+            "time": "2014-05-23 14:36:49"
         },
         {
             "name": "symfony/yaml",
