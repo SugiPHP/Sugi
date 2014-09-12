@@ -1,7 +1,8 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
     ],
     "hash": "6313c6cfed109bf315d1049de522165a",
     "packages": [
@@ -191,12 +192,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/natxet/CssMin.git",
-                "reference": "afdcdbdb5fc332313f47a79ae60346df3e69a572"
+                "reference": "003920e783c568c2d8fdf03999eebefb8479092a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/natxet/CssMin/zipball/afdcdbdb5fc332313f47a79ae60346df3e69a572",
-                "reference": "afdcdbdb5fc332313f47a79ae60346df3e69a572",
+                "url": "https://api.github.com/repos/natxet/CssMin/zipball/003920e783c568c2d8fdf03999eebefb8479092a",
+                "reference": "003920e783c568c2d8fdf03999eebefb8479092a",
                 "shasum": ""
             },
             "require": {
@@ -225,7 +226,7 @@
                 "css",
                 "minify"
             ],
-            "time": "2013-07-02 20:53:35"
+            "time": "2014-09-10 14:34:00"
         },
         {
             "name": "psr/log",
@@ -276,12 +277,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SugiPHP/Assets.git",
-                "reference": "ac106023eb535c6b74a6af16f6d77671c0a91e8f"
+                "reference": "d72d7a2adef7da03dc5d28829c65824ad0fc1106"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SugiPHP/Assets/zipball/ac106023eb535c6b74a6af16f6d77671c0a91e8f",
-                "reference": "ac106023eb535c6b74a6af16f6d77671c0a91e8f",
+                "url": "https://api.github.com/repos/SugiPHP/Assets/zipball/d72d7a2adef7da03dc5d28829c65824ad0fc1106",
+                "reference": "d72d7a2adef7da03dc5d28829c65824ad0fc1106",
                 "shasum": ""
             },
             "require": {
@@ -291,7 +292,8 @@
                 "tedivm/jshrink": "0.5.*"
             },
             "require-dev": {
-                "leafo/lessphp": "dev-master"
+                "leafo/lessphp": "dev-master",
+                "leafo/scssphp": "dev-master"
             },
             "type": "library",
             "autoload": {
@@ -306,8 +308,7 @@
             "authors": [
                 {
                     "name": "Plamen Popov",
-                    "email": "tzappa@gmail.com",
-                    "role": "Developer"
+                    "email": "tzappa@gmail.com"
                 }
             ],
             "description": "SugiPHP Assets Management Component based on Assetic",
@@ -318,7 +319,7 @@
                 "javascript",
                 "less"
             ],
-            "time": "2014-05-27 10:05:01"
+            "time": "2014-08-20 08:58:27"
         },
         {
             "name": "sugiphp/cache",
@@ -326,12 +327,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SugiPHP/Cache.git",
-                "reference": "33fe2e9fe55bc218c131c77859e1a233d81c33f9"
+                "reference": "0fffca72e83dcadc208b71c940976b6f5d0f901f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SugiPHP/Cache/zipball/33fe2e9fe55bc218c131c77859e1a233d81c33f9",
-                "reference": "33fe2e9fe55bc218c131c77859e1a233d81c33f9",
+                "url": "https://api.github.com/repos/SugiPHP/Cache/zipball/0fffca72e83dcadc208b71c940976b6f5d0f901f",
+                "reference": "0fffca72e83dcadc208b71c940976b6f5d0f901f",
                 "shasum": ""
             },
             "require": {
@@ -350,8 +351,7 @@
             "authors": [
                 {
                     "name": "Plamen Popov",
-                    "email": "tzappa@gmail.com",
-                    "role": "Developer"
+                    "email": "tzappa@gmail.com"
                 }
             ],
             "description": "SugiPHP Cache Component",
@@ -361,7 +361,7 @@
                 "memcache",
                 "sugiphp"
             ],
-            "time": "2014-04-28 11:12:22"
+            "time": "2014-08-13 11:32:24"
         },
         {
             "name": "sugiphp/config",
@@ -369,12 +369,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SugiPHP/Config.git",
-                "reference": "b76a059f3feecfe722ecc5b0f03cc758d394d070"
+                "reference": "43bcd06cb37042cf9280d504cdeb2a220a5a20f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SugiPHP/Config/zipball/b76a059f3feecfe722ecc5b0f03cc758d394d070",
-                "reference": "b76a059f3feecfe722ecc5b0f03cc758d394d070",
+                "url": "https://api.github.com/repos/SugiPHP/Config/zipball/43bcd06cb37042cf9280d504cdeb2a220a5a20f3",
+                "reference": "43bcd06cb37042cf9280d504cdeb2a220a5a20f3",
                 "shasum": ""
             },
             "require": {
@@ -399,8 +399,7 @@
             "authors": [
                 {
                     "name": "Plamen Popov",
-                    "email": "tzappa@gmail.com",
-                    "role": "Developer"
+                    "email": "tzappa@gmail.com"
                 }
             ],
             "description": "SugiPHP Config Component",
@@ -413,7 +412,7 @@
                 "xml",
                 "yaml"
             ],
-            "time": "2014-05-27 09:21:31"
+            "time": "2014-08-19 08:41:47"
         },
         {
             "name": "sugiphp/container",
@@ -421,12 +420,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SugiPHP/Container.git",
-                "reference": "4a494dd0973a8041475987de3b4e68ccd41a669b"
+                "reference": "75e22a536100c2a89f87be9f59def4278cb6e409"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SugiPHP/Container/zipball/4a494dd0973a8041475987de3b4e68ccd41a669b",
-                "reference": "4a494dd0973a8041475987de3b4e68ccd41a669b",
+                "url": "https://api.github.com/repos/SugiPHP/Container/zipball/75e22a536100c2a89f87be9f59def4278cb6e409",
+                "reference": "75e22a536100c2a89f87be9f59def4278cb6e409",
                 "shasum": ""
             },
             "require": {
@@ -445,15 +444,14 @@
             "authors": [
                 {
                     "name": "Plamen Popov",
-                    "email": "tzappa@gmail.com",
-                    "role": "Developer"
+                    "email": "tzappa@gmail.com"
                 }
             ],
             "description": "SugiPHP Container Component",
             "keywords": [
                 "container"
             ],
-            "time": "2014-04-15 13:41:38"
+            "time": "2014-08-13 11:38:54"
         },
         {
             "name": "sugiphp/cron",
@@ -461,12 +459,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SugiPHP/Cron.git",
-                "reference": "38e281a97c9e68fac0607c5dbb46d16c33898e8b"
+                "reference": "86a478b4a9cf5dd8f823937a4d14b3d9ae2d488b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SugiPHP/Cron/zipball/38e281a97c9e68fac0607c5dbb46d16c33898e8b",
-                "reference": "38e281a97c9e68fac0607c5dbb46d16c33898e8b",
+                "url": "https://api.github.com/repos/SugiPHP/Cron/zipball/86a478b4a9cf5dd8f823937a4d14b3d9ae2d488b",
+                "reference": "86a478b4a9cf5dd8f823937a4d14b3d9ae2d488b",
                 "shasum": ""
             },
             "require": {
@@ -485,8 +483,7 @@
             "authors": [
                 {
                     "name": "Plamen Popov",
-                    "email": "tzappa@gmail.com",
-                    "role": "Developer"
+                    "email": "tzappa@gmail.com"
                 }
             ],
             "description": "Cron jobs with PHP",
@@ -495,7 +492,7 @@
                 "cronjob",
                 "crontab"
             ],
-            "time": "2014-04-28 11:14:35"
+            "time": "2014-08-13 14:10:38"
         },
         {
             "name": "sugiphp/database",
@@ -547,12 +544,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SugiPHP/Events.git",
-                "reference": "3d7e5b607464198309f8549999b8f02df8feec34"
+                "reference": "d411456126b875eaac570ffd50342cc9f53dfd48"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SugiPHP/Events/zipball/3d7e5b607464198309f8549999b8f02df8feec34",
-                "reference": "3d7e5b607464198309f8549999b8f02df8feec34",
+                "url": "https://api.github.com/repos/SugiPHP/Events/zipball/d411456126b875eaac570ffd50342cc9f53dfd48",
+                "reference": "d411456126b875eaac570ffd50342cc9f53dfd48",
                 "shasum": ""
             },
             "require": {
@@ -571,8 +568,7 @@
             "authors": [
                 {
                     "name": "Plamen Popov",
-                    "email": "tzappa@gmail.com",
-                    "role": "Developer"
+                    "email": "tzappa@gmail.com"
                 }
             ],
             "description": "Observer design pattern-like events system",
@@ -581,7 +577,7 @@
                 "event",
                 "observer"
             ],
-            "time": "2014-04-15 13:56:48"
+            "time": "2014-08-13 11:40:09"
         },
         {
             "name": "sugiphp/filesystem",
@@ -589,12 +585,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SugiPHP/FileSystem.git",
-                "reference": "211404a62e2f907f9e9c015ce81aa5c8b68903ed"
+                "reference": "cfb0b314b36f4014b41b93e48c75f2015d02f903"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SugiPHP/FileSystem/zipball/211404a62e2f907f9e9c015ce81aa5c8b68903ed",
-                "reference": "211404a62e2f907f9e9c015ce81aa5c8b68903ed",
+                "url": "https://api.github.com/repos/SugiPHP/FileSystem/zipball/cfb0b314b36f4014b41b93e48c75f2015d02f903",
+                "reference": "cfb0b314b36f4014b41b93e48c75f2015d02f903",
                 "shasum": ""
             },
             "require": {
@@ -613,8 +609,7 @@
             "authors": [
                 {
                     "name": "Plamen Popov",
-                    "email": "tzappa@gmail.com",
-                    "role": "Developer"
+                    "email": "tzappa@gmail.com"
                 }
             ],
             "description": "Basic utilities to work with file system",
@@ -623,7 +618,7 @@
                 "file system",
                 "files"
             ],
-            "time": "2014-04-15 14:10:24"
+            "time": "2014-08-13 11:41:01"
         },
         {
             "name": "sugiphp/filter",
@@ -631,12 +626,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SugiPHP/Filter.git",
-                "reference": "3b91efed0c9aab62727290ba08e105ebed0b32f1"
+                "reference": "11235bb2ee5b19df786b211f1009670015248c29"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SugiPHP/Filter/zipball/3b91efed0c9aab62727290ba08e105ebed0b32f1",
-                "reference": "3b91efed0c9aab62727290ba08e105ebed0b32f1",
+                "url": "https://api.github.com/repos/SugiPHP/Filter/zipball/11235bb2ee5b19df786b211f1009670015248c29",
+                "reference": "11235bb2ee5b19df786b211f1009670015248c29",
                 "shasum": ""
             },
             "require": {
@@ -655,15 +650,14 @@
             "authors": [
                 {
                     "name": "Plamen Popov",
-                    "email": "tzappa@gmail.com",
-                    "role": "Developer"
+                    "email": "tzappa@gmail.com"
                 }
             ],
             "description": "Filter helper functions",
             "keywords": [
                 "filter"
             ],
-            "time": "2014-04-16 13:21:55"
+            "time": "2014-08-13 11:42:20"
         },
         {
             "name": "sugiphp/http",
@@ -671,12 +665,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SugiPHP/HTTP.git",
-                "reference": "feede1d81230d3382ff48f1159609831281842bb"
+                "reference": "6261e1376be3db48c4345c68d078cfdb58abbebd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SugiPHP/HTTP/zipball/feede1d81230d3382ff48f1159609831281842bb",
-                "reference": "feede1d81230d3382ff48f1159609831281842bb",
+                "url": "https://api.github.com/repos/SugiPHP/HTTP/zipball/6261e1376be3db48c4345c68d078cfdb58abbebd",
+                "reference": "6261e1376be3db48c4345c68d078cfdb58abbebd",
                 "shasum": ""
             },
             "require": {
@@ -695,8 +689,7 @@
             "authors": [
                 {
                     "name": "Plamen Popov",
-                    "email": "tzappa@gmail.com",
-                    "role": "Developer"
+                    "email": "tzappa@gmail.com"
                 }
             ],
             "description": "HTTP Request and Response classes",
@@ -705,7 +698,7 @@
                 "request",
                 "response"
             ],
-            "time": "2014-04-28 11:51:48"
+            "time": "2014-08-13 11:30:26"
         },
         {
             "name": "sugiphp/logger",
@@ -844,12 +837,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Process.git",
-                "reference": "e4b5fcd31ce60a0721fb36d6478de0185afe744b"
+                "reference": "8f1f4e4329d3dc9fe08a7106417168145301e49f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Process/zipball/e4b5fcd31ce60a0721fb36d6478de0185afe744b",
-                "reference": "e4b5fcd31ce60a0721fb36d6478de0185afe744b",
+                "url": "https://api.github.com/repos/symfony/Process/zipball/8f1f4e4329d3dc9fe08a7106417168145301e49f",
+                "reference": "8f1f4e4329d3dc9fe08a7106417168145301e49f",
                 "shasum": ""
             },
             "require": {
@@ -872,19 +865,17 @@
             ],
             "authors": [
                 {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com",
-                    "homepage": "http://fabien.potencier.org",
-                    "role": "Lead Developer"
-                },
-                {
                     "name": "Symfony Community",
                     "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
                 }
             ],
             "description": "Symfony Process Component",
             "homepage": "http://symfony.com",
-            "time": "2014-05-23 14:36:49"
+            "time": "2014-08-31 03:28:38"
         },
         {
             "name": "symfony/yaml",
@@ -996,6 +987,7 @@
         "sugiphp/container": 20,
         "sugiphp/filter": 20
     },
+    "prefer-stable": false,
     "platform": {
         "php": ">=5.3"
     },
