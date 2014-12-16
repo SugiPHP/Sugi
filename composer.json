@@ -11,21 +11,21 @@
     ],
     "require": {
         "php": ">=5.3",
-        "sugiphp/config": "dev-master",
-        "sugiphp/cache": "dev-master",
+        "sugiphp/cache": "~1.0",
+        "sugiphp/config": "~1.0",
+        "sugiphp/container": "~1.0",
+        "sugiphp/database": "~1.0",
+        "sugiphp/events": "~1.0",
         "sugiphp/logger": "dev-master",
-        "sugiphp/database": "dev-master",
-        "sugiphp/events": "dev-master",
         "sugiphp/http": "dev-master",
         "sugiphp/routing": "dev-master",
         "sugiphp/assets": "dev-master",
         "sugiphp/filesystem": "dev-master",
         "sugiphp/cron": "dev-master",
-        "sugiphp/container": "dev-master",
         "sugiphp/filter": "dev-master",
-        "symfony/yaml": "2.2.*",
-        "leafo/lessphp": "0.3.*",
-        "swiftmailer/swiftmailer": "4.3.*"
+        "symfony/yaml": "~2.2",
+        "leafo/lessphp": "~0.3",
+        "swiftmailer/swiftmailer": "~4.3"
     },
     "autoload": {
         "psr-4": {
