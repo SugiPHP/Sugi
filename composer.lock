@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "20597674b0c53584658999077d469839",
+    "hash": "d5fe46092b535dc3bb93d99fb0ff8f8a",
     "packages": [
         {
             "name": "kriswallsmith/assetic",
@@ -626,16 +626,16 @@
         },
         {
             "name": "sugiphp/filter",
-            "version": "dev-master",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SugiPHP/Filter.git",
-                "reference": "9f2ab5fd702bfccc2710d5efe8a5dfb0342ba134"
+                "reference": "1fc455efc5e3405c4186c2c997aee81eeb1eb59c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SugiPHP/Filter/zipball/9f2ab5fd702bfccc2710d5efe8a5dfb0342ba134",
-                "reference": "9f2ab5fd702bfccc2710d5efe8a5dfb0342ba134",
+                "url": "https://api.github.com/repos/SugiPHP/Filter/zipball/1fc455efc5e3405c4186c2c997aee81eeb1eb59c",
+                "reference": "1fc455efc5e3405c4186c2c997aee81eeb1eb59c",
                 "shasum": ""
             },
             "require": {
@@ -661,20 +661,20 @@
             "keywords": [
                 "filter"
             ],
-            "time": "2014-11-10 15:34:37"
+            "time": "2014-12-16 14:18:09"
         },
         {
             "name": "sugiphp/http",
-            "version": "dev-master",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SugiPHP/HTTP.git",
-                "reference": "6261e1376be3db48c4345c68d078cfdb58abbebd"
+                "reference": "c771caa034d96dc9413a0c0aef12b4770657f967"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SugiPHP/HTTP/zipball/6261e1376be3db48c4345c68d078cfdb58abbebd",
-                "reference": "6261e1376be3db48c4345c68d078cfdb58abbebd",
+                "url": "https://api.github.com/repos/SugiPHP/HTTP/zipball/c771caa034d96dc9413a0c0aef12b4770657f967",
+                "reference": "c771caa034d96dc9413a0c0aef12b4770657f967",
                 "shasum": ""
             },
             "require": {
@@ -702,7 +702,7 @@
                 "request",
                 "response"
             ],
-            "time": "2014-08-13 11:30:26"
+            "time": "2014-12-16 14:46:53"
         },
         {
             "name": "sugiphp/logger",
@@ -751,12 +751,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SugiPHP/Routing.git",
-                "reference": "c06fbf26e7b07931b6033885c542066eb4039a63"
+                "reference": "8a14280a88b749ae8d55eae2ab3c4afe88b6dd68"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SugiPHP/Routing/zipball/c06fbf26e7b07931b6033885c542066eb4039a63",
-                "reference": "c06fbf26e7b07931b6033885c542066eb4039a63",
+                "url": "https://api.github.com/repos/SugiPHP/Routing/zipball/8a14280a88b749ae8d55eae2ab3c4afe88b6dd68",
+                "reference": "8a14280a88b749ae8d55eae2ab3c4afe88b6dd68",
                 "shasum": ""
             },
             "require": {
@@ -775,15 +775,14 @@
             "authors": [
                 {
                     "name": "Plamen Popov",
-                    "email": "tzappa@gmail.com",
-                    "role": "Developer"
+                    "email": "tzappa@gmail.com"
                 }
             ],
             "description": "Routing",
             "keywords": [
                 "route"
             ],
-            "time": "2014-04-28 12:00:49"
+            "time": "2014-12-17 16:05:41"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -841,16 +840,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Process.git",
-                "reference": "e48a06acc112f2b76d6e5ac7e7eaa01a9305d146"
+                "reference": "eb512e3b08841f1e0e39960d69109e47c729988b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Process/zipball/e48a06acc112f2b76d6e5ac7e7eaa01a9305d146",
-                "reference": "e48a06acc112f2b76d6e5ac7e7eaa01a9305d146",
+                "url": "https://api.github.com/repos/symfony/Process/zipball/eb512e3b08841f1e0e39960d69109e47c729988b",
+                "reference": "eb512e3b08841f1e0e39960d69109e47c729988b",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "php": ">=5.3.9"
             },
             "type": "library",
             "extra": {
@@ -879,7 +878,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "http://symfony.com",
-            "time": "2014-12-12 16:23:01"
+            "time": "2015-01-09 06:51:41"
         },
         {
             "name": "symfony/yaml",
@@ -888,16 +887,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Yaml.git",
-                "reference": "b9c19ce1bd9a51d3f42665973088f2e2b82db240"
+                "reference": "16c97a1567ef607b16f843d3ebc99f113cc1957e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Yaml/zipball/b9c19ce1bd9a51d3f42665973088f2e2b82db240",
-                "reference": "b9c19ce1bd9a51d3f42665973088f2e2b82db240",
+                "url": "https://api.github.com/repos/symfony/Yaml/zipball/16c97a1567ef607b16f843d3ebc99f113cc1957e",
+                "reference": "16c97a1567ef607b16f843d3ebc99f113cc1957e",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "php": ">=5.3.9"
             },
             "type": "library",
             "extra": {
@@ -926,7 +925,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "http://symfony.com",
-            "time": "2014-12-09 17:32:32"
+            "time": "2015-01-09 18:07:24"
         },
         {
             "name": "tedivm/jshrink",
@@ -975,16 +974,15 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "sugiphp/logger": 20,
-        "sugiphp/http": 20,
         "sugiphp/routing": 20,
         "sugiphp/assets": 20,
         "sugiphp/filesystem": 20,
-        "sugiphp/cron": 20,
-        "sugiphp/filter": 20
+        "sugiphp/cron": 20
     },
     "prefer-stable": false,
+    "prefer-lowest": false,
     "platform": {
-        "php": ">=5.3"
+        "php": ">=5.4"
     },
     "platform-dev": []
 }

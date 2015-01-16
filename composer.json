@@ -10,19 +10,19 @@
         }
     ],
     "require": {
-        "php": ">=5.3",
+        "php": ">=5.4",
         "sugiphp/cache": "~1.0",
         "sugiphp/config": "~1.0",
         "sugiphp/container": "~1.0",
         "sugiphp/database": "~1.0",
         "sugiphp/events": "~1.0",
+        "sugiphp/filter": "~1.0",
+        "sugiphp/http": "~1.0",
         "sugiphp/logger": "dev-master",
-        "sugiphp/http": "dev-master",
         "sugiphp/routing": "dev-master",
         "sugiphp/assets": "dev-master",
         "sugiphp/filesystem": "dev-master",
         "sugiphp/cron": "dev-master",
-        "sugiphp/filter": "dev-master",
         "symfony/yaml": "~2.2",
         "leafo/lessphp": "~0.3",
         "swiftmailer/swiftmailer": "~4.3"

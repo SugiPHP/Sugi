@@ -68,12 +68,14 @@ class Mail
 
 	public static function send($to, $subject, $body, $html = null, $from = null)
 	{
+		$mailer = static::getInstance();
+
 		if (is_null($from)) {
 			$from = static::$from;
 		}
 
 		$to = (array) $to;
-		
+
 		// Create the message
 		$message = \Swift_Message::newInstance()
 			// Give the message a subject
@@ -96,8 +98,6 @@ class Mail
 
 		// Optionally add any attachments
 		//->attach(Swift_Attachment::fromPath('my-document.pdf'))
-
-		$mailer = static::getInstance();
 
 		return $mailer->send($message);
 	}
