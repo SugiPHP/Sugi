@@ -100,7 +100,7 @@ class Router
 		}
 
 		// match first route that matches the request
-		static::$match = $router->match($request->getPath(), $request->getMethod(), $request->getHost(), $request->getScheme());
+		static::$match = $router->getFirstMatch($request->getPath(), $request->getMethod(), $request->getHost(), $request->getScheme());
 
 		return static::checkMatch();
 	}
@@ -118,7 +118,7 @@ class Router
 		$router = static::getInstance();
 
 		// match next route that matches the request
-		static::$match = $router->matchNext();
+		static::$match = $router->getNextMatch();
 
 		return static::checkMatch();
 	}
@@ -141,7 +141,11 @@ class Router
 	 */
 	public static function getParam($param)
 	{
-		return isset(static::$match[$param]) ? static::$match[$param] : null;
+		if (!static::$match) {
+			return null;
+		}
+
+		return static::$match->get($param);
 	}
 
 	/**
@@ -181,7 +185,7 @@ class Router
 	{
 		if (static::$match) {
 			// Fire an event
-			Event::fire("sugi.router.match", static::$match);
+			Event::fire("sugi.router.match", array("route" => static::$match));
 
 			$name = static::getName();
 			if (isset(static::$callables[$name])) {
