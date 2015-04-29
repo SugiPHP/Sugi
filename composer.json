@@ -19,7 +19,7 @@
         "sugiphp/filter": "~1.0",
         "sugiphp/http": "~1.0",
         "sugiphp/logger": "dev-master",
-        "sugiphp/routing": "dev-master",
+        "sugiphp/routing": "0.2",
         "sugiphp/assets": "dev-master",
         "sugiphp/filesystem": "dev-master",
         "sugiphp/cron": "dev-master",
