@@ -19,7 +19,7 @@ class App extends Container
     public static function getInstance()
     {
         if (!static::$container) {
-            static::$container = new self();
+            static::$container = new static();
         }
 
         return static::$container;

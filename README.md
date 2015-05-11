@@ -1,6 +1,6 @@
 ## Sugi ##
 
-The second version of Sugi is using a different approach. It will be (or become) a micro framework using SugiPHP Components as well as some other components which are well known, well documented and are with decent quality.
+The second version of Sugi is using a different approach. It will be a micro framework using SugiPHP Components as well as some other components which are well known, well documented and are with decent quality.
 
 ### Sugi App ###
 
