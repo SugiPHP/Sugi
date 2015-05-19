@@ -36,9 +36,15 @@ class App extends Container
         // Set output encoding
         mb_http_output("UTF-8");
 
+        // ServerRequest based on PSR-7 ServerRequestInterface
         $this["request"] = function () {
             // ServerRequest instance, using values from superglobals
             return ServerRequestFactory::fromGlobals();
+        };
+
+        // URI based on PSR-7 UriInterface
+        $this["uri"] = function () {
+            return $this["request"]->getUri();
         };
 
         /*

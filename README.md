@@ -22,3 +22,27 @@ The App is PSR-7 compatible and is using [phly/http](https://github.com/phly/htt
 $app["request"] = new \Your\ServerRequest();
 
 ?>
+
+The URI is an instance of \Psr\Http\Message\UriInterface, so you can use:
+
+<?php
+
+$app["uri"]->getHost();
+$app["uri"]->getPath();
+
+?>
+
+and all other PSR-7 UriInterface methods. Note that manipulating an $app["uri"] will not change it's value:
+
+<?php
+
+echo $app["uri"]->getPath(); // "/"
+echo $app["uri"]->withPath("/foo/bar")->getPath(); // "/foo/bar"
+echo $app["uri"]->getPath(); // "/"
+
+// to override it:
+$app["uri"] = $app["uri"]->withPath("/foo");
+echo $app["uri"]->getPath(); // "/foo"
+
+?>
+
