@@ -43,7 +43,7 @@ class App extends Container
          * </code>
          *
          * When PHP runs from CLI (Linux bash) you can set it with
-         * export APPLICATION_ENC=development
+         * export APPLICATION_ENV=development
          * this can be also added in your ~/.bashrc file
          */
         if (!empty($settings["mode"])) {
