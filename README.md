@@ -13,3 +13,12 @@ $app = new App();
 
 // Or use Singleton pattern:
 $app = App::getInstance();
+?>
+
+The App is PSR-7 compatible and is using [phly/http](https://github.com/phly/http) internally. You can plug any other PSR-7 compatible library for ServerRequest (instance of \Psr\Http\Message\ServerRequestInterface.)
+
+<?php
+
+$app["request"] = new \Your\ServerRequest();
+
+?>

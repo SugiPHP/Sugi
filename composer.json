@@ -2,6 +2,7 @@
     "name": "sugiphp/sugi",
     "type": "library",
     "description": "SugiPHP Micro Framework",
+    "keywords": ["framework", "psr-1", "psr-2", "psr-3", "psr-4", "psr-7"],
     "license": "MIT",
     "authors": [
         {
