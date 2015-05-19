@@ -8,6 +8,7 @@
 namespace SugiPHP\Sugi;
 
 use SugiPHP\Container\Container;
+use Phly\Http\ServerRequestFactory;
 
 class App extends Container
 {
@@ -34,6 +35,11 @@ class App extends Container
 
         // Set output encoding
         mb_http_output("UTF-8");
+
+        $this["request"] = function () {
+            // ServerRequest instance, using values from superglobals
+            return ServerRequestFactory::fromGlobals();
+        };
 
         /*
          * Are we on development or on production server

@@ -4,77 +4,86 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0154383ddcf93a794271ca07e29abfb3",
+    "hash": "93f9dd1c3d08bba72f608696a640576a",
     "packages": [
         {
-            "name": "sugiphp/cache",
-            "version": "1.0.0",
+            "name": "phly/http",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/SugiPHP/Cache.git",
-                "reference": "754763be54863cf19091088dfb35bd82ff323269"
+                "url": "https://github.com/phly/http.git",
+                "reference": "b8ed4bee8be73e1fbcad83eaf315ceac0a8f8302"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SugiPHP/Cache/zipball/754763be54863cf19091088dfb35bd82ff323269",
-                "reference": "754763be54863cf19091088dfb35bd82ff323269",
+                "url": "https://api.github.com/repos/phly/http/zipball/b8ed4bee8be73e1fbcad83eaf315ceac0a8f8302",
+                "reference": "b8ed4bee8be73e1fbcad83eaf315ceac0a8f8302",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3"
+                "php": ">=5.4.8",
+                "psr/http-message": "^0.11"
             },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "SugiPHP\\Cache\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Plamen Popov",
-                    "email": "tzappa@gmail.com"
-                }
-            ],
-            "description": "SugiPHP Cache Component",
-            "keywords": [
-                "apc",
-                "cache",
-                "memcache",
-                "sugiphp"
-            ],
-            "time": "2014-12-16 09:46:39"
-        },
-        {
-            "name": "sugiphp/config",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/SugiPHP/Config.git",
-                "reference": "d3530f8dc9caae5eb4c5cd044a3c73e89582a93f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/SugiPHP/Config/zipball/d3530f8dc9caae5eb4c5cd044a3c73e89582a93f",
-                "reference": "d3530f8dc9caae5eb4c5cd044a3c73e89582a93f",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3"
+            "provide": {
+                "psr/http-message-implementation": "^0.11"
             },
             "require-dev": {
-                "symfony/yaml": "~2.2"
-            },
-            "suggest": {
-                "symfony/yaml": "Symfony Yaml Component to use .yml config files"
+                "phpunit/phpunit": "3.7.*",
+                "squizlabs/php_codesniffer": "1.5.*"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev",
+                    "dev-develop": "1.1-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
-                    "SugiPHP\\Config\\": ""
+                    "Phly\\Http\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Matthew Weier O'Phinney",
+                    "email": "matthew@weierophinney.net",
+                    "homepage": "http://mwop.net"
+                }
+            ],
+            "description": "PSR HTTP Message implementations",
+            "homepage": "https://github.com/phly/http",
+            "keywords": [
+                "http"
+            ],
+            "time": "2015-05-17 15:56:21"
+        },
+        {
+            "name": "psr/http-message",
+            "version": "0.11.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/http-message.git",
+                "reference": "809419e498a388dfa7ef6898392431e5911a0289"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/http-message/zipball/809419e498a388dfa7ef6898392431e5911a0289",
+                "reference": "809419e498a388dfa7ef6898392431e5911a0289",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Http\\Message\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -83,21 +92,20 @@
             ],
             "authors": [
                 {
-                    "name": "Plamen Popov",
-                    "email": "tzappa@gmail.com"
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
                 }
             ],
-            "description": "SugiPHP Config Component",
+            "description": "Common interface for HTTP messages",
             "keywords": [
-                "config",
-                "configuration",
-                "ini",
-                "json",
-                "php",
-                "xml",
-                "yaml"
+                "http",
+                "http-message",
+                "psr",
+                "psr-7",
+                "request",
+                "response"
             ],
-            "time": "2014-12-16 12:51:21"
+            "time": "2015-05-04 20:20:08"
         },
         {
             "name": "sugiphp/container",
@@ -137,92 +145,14 @@
                 "container"
             ],
             "time": "2015-02-04 15:23:11"
-        },
-        {
-            "name": "sugiphp/events",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/SugiPHP/Events.git",
-                "reference": "e19e1c4c8a94bfb0b36c250f81bcf934ca1a818c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/SugiPHP/Events/zipball/e19e1c4c8a94bfb0b36c250f81bcf934ca1a818c",
-                "reference": "e19e1c4c8a94bfb0b36c250f81bcf934ca1a818c",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "SugiPHP\\Events\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Plamen Popov",
-                    "email": "tzappa@gmail.com"
-                }
-            ],
-            "description": "Observer design pattern-like events system",
-            "keywords": [
-                "dispatcher",
-                "event",
-                "observer"
-            ],
-            "time": "2014-12-16 13:21:04"
-        },
-        {
-            "name": "sugiphp/filter",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/SugiPHP/Filter.git",
-                "reference": "1fc455efc5e3405c4186c2c997aee81eeb1eb59c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/SugiPHP/Filter/zipball/1fc455efc5e3405c4186c2c997aee81eeb1eb59c",
-                "reference": "1fc455efc5e3405c4186c2c997aee81eeb1eb59c",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "SugiPHP\\Filter\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Plamen Popov",
-                    "email": "tzappa@gmail.com"
-                }
-            ],
-            "description": "Filter helper functions",
-            "keywords": [
-                "filter"
-            ],
-            "time": "2014-12-16 14:18:09"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "phly/http": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
