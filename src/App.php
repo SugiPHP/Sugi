@@ -15,6 +15,7 @@ class App extends Container
     use ConfigTrait;
     use LoggerTrait;
     use RouterTrait;
+    use EventsTrait;
 
     /**
      * Instance of a SugiPHP\Container\Container
@@ -94,6 +95,11 @@ class App extends Container
         // Router
         $this->conditionalSet("router", function () {
             return $this->prepareRouter((array) $this->config("router"));
+        });
+
+        // Events
+        $this->conditionalSet("dispatcher", function () {
+            return $this->prepareDispatcher((array) $this->config("dispatcher"));
         });
 
         //  Are we on development or on production server

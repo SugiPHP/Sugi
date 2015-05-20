@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6b2c346c8b7dfc395bb57e0d2b8bee7a",
+    "hash": "69ae99afc8e21e7a633d957ea195c71a",
     "packages": [
         {
             "name": "aura/router",
@@ -332,6 +332,47 @@
                 "container"
             ],
             "time": "2015-02-04 15:23:11"
+        },
+        {
+            "name": "sugiphp/events",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SugiPHP/Events.git",
+                "reference": "e19e1c4c8a94bfb0b36c250f81bcf934ca1a818c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SugiPHP/Events/zipball/e19e1c4c8a94bfb0b36c250f81bcf934ca1a818c",
+                "reference": "e19e1c4c8a94bfb0b36c250f81bcf934ca1a818c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SugiPHP\\Events\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Plamen Popov",
+                    "email": "tzappa@gmail.com"
+                }
+            ],
+            "description": "Observer design pattern-like events system",
+            "keywords": [
+                "dispatcher",
+                "event",
+                "observer"
+            ],
+            "time": "2014-12-16 13:21:04"
         }
     ],
     "packages-dev": [],
