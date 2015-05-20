@@ -18,9 +18,10 @@
         "sugiphp/events": "~1.0",
         "sugiphp/filter": "~1.0",
         "sugiphp/http": "~1.0",
-        "sugiphp/logger": "dev-master",
+        "sugiphp/logger": "~1.0",
         "sugiphp/routing": "0.2",
         "sugiphp/assets": "dev-master",
+        "natxet/cssmin": "dev-master",
         "sugiphp/filesystem": "dev-master",
         "sugiphp/cron": "dev-master",
         "symfony/yaml": "~2.2",
@@ -31,6 +32,5 @@
         "psr-4": {
             "SugiPHP\\Sugi\\": "src/"
         }
-    },
-    "minimum-stability": "dev"
+    }
 }
