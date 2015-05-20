@@ -13,6 +13,7 @@ use Phly\Http\ServerRequestFactory;
 class App extends Container
 {
     use ConfigTrait;
+    use LoggerTrait;
 
     /**
      * Instance of a SugiPHP\Container\Container
@@ -82,6 +83,11 @@ class App extends Container
         // Config file reader
         $this->conditionalSet("config", function () {
             return $this->prepareConfig($this["config_path"]);
+        });
+
+        // Logger
+        $this->conditionalSet("logger", function () {
+            return $this->prepareLogger((array) $this->config("logger"));
         });
 
         //  Are we on development or on production server
