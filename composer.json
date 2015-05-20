@@ -15,6 +15,7 @@
         "sugiphp/container": "~1.0",
         "sugiphp/config": "~1.0",
         "sugiphp/events": "~1.0",
+        "sugiphp/cache": "~1.0",
         "phly/http": "~1.0@dev",
         "aura/router": "3.*@dev",
         "katzgrau/klogger": "dev-master"

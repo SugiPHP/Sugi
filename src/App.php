@@ -16,6 +16,7 @@ class App extends Container
     use LoggerTrait;
     use RouterTrait;
     use EventsTrait;
+    use CacheTrait;
 
     /**
      * Instance of a SugiPHP\Container\Container
@@ -101,6 +102,11 @@ class App extends Container
         $this->conditionalSet("dispatcher", function () {
             return $this->prepareDispatcher((array) $this->config("dispatcher"));
         });
+
+        // Caching
+        $this["cache"] = function () {
+            return $this->prepareCache((array) $this->config("cache"));
+        };
 
         //  Are we on development or on production server
         $this->conditionalSet("mode", function () {
