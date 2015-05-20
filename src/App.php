@@ -14,6 +14,7 @@ class App extends Container
 {
     use ConfigTrait;
     use LoggerTrait;
+    use RouterTrait;
 
     /**
      * Instance of a SugiPHP\Container\Container
@@ -80,14 +81,19 @@ class App extends Container
             return $this["request"]->getUri();
         });
 
-        // Config file reader
+        // Configuration reader
         $this->conditionalSet("config", function () {
             return $this->prepareConfig($this["config_path"]);
         });
 
-        // Logger
+        // File Logger
         $this->conditionalSet("logger", function () {
             return $this->prepareLogger((array) $this->config("logger"));
+        });
+
+        // Router
+        $this->conditionalSet("router", function () {
+            return $this->prepareRouter((array) $this->config("router"));
         });
 
         //  Are we on development or on production server
