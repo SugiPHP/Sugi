@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "93f9dd1c3d08bba72f608696a640576a",
+    "hash": "6a26348f4b07edd295d81b78100d3202",
     "packages": [
         {
             "name": "phly/http",
@@ -106,6 +106,57 @@
                 "response"
             ],
             "time": "2015-05-04 20:20:08"
+        },
+        {
+            "name": "sugiphp/config",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SugiPHP/Config.git",
+                "reference": "d3530f8dc9caae5eb4c5cd044a3c73e89582a93f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SugiPHP/Config/zipball/d3530f8dc9caae5eb4c5cd044a3c73e89582a93f",
+                "reference": "d3530f8dc9caae5eb4c5cd044a3c73e89582a93f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "require-dev": {
+                "symfony/yaml": "~2.2"
+            },
+            "suggest": {
+                "symfony/yaml": "Symfony Yaml Component to use .yml config files"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SugiPHP\\Config\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Plamen Popov",
+                    "email": "tzappa@gmail.com"
+                }
+            ],
+            "description": "SugiPHP Config Component",
+            "keywords": [
+                "config",
+                "configuration",
+                "ini",
+                "json",
+                "php",
+                "xml",
+                "yaml"
+            ],
+            "time": "2014-12-16 12:51:21"
         },
         {
             "name": "sugiphp/container",

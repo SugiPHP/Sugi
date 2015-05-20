@@ -13,6 +13,7 @@
     "require": {
         "php": ">=5.4",
         "sugiphp/container": "~1.0",
+        "sugiphp/config": "~1.0",
         "phly/http": "~1.0@dev"
     },
     "autoload": {
