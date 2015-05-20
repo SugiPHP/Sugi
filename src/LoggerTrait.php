@@ -20,7 +20,7 @@ trait LoggerTrait
      */
     public function log($level, $message)
     {
-        return $this["log"]->log($level, $message);
+        return $this["logger"]->log($level, $message);
     }
 
     protected function prepareLogger(array $config = [])
