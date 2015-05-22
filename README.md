@@ -1,5 +1,5 @@
-Sugi
-====
+Sugi v.1
+========
 
 The Sugi package is intended to make use of SugiPHP components and some 
 other third party libraries a lot easier. This is done by making a 
