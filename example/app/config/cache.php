@@ -1,5 +1,9 @@
 <?php
+/**
+ * Application Cache
+ */
 
-return array(
-	"store" => "apc",
-);
+return [
+    // "store"  => "apc",
+    // "prefix" => "YourApp",
+];

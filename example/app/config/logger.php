@@ -1,26 +1,12 @@
 <?php
 /**
- * Logger configuration
+ * KLogger settings demo
  */
 
-return array(
-	array(
-		"type"     => "file",
-		"filename" => BASEPATH."log/custom-".date("Ymd").".log",
-		// "filter"   => "all", // default is "all"
-		"filter"   => "all -debug",
-		// "format"   => "[{Y}-{m}-{d} {H}:{i}:{s}] [{ip}] [{level}] {message}", // default
-	),
-	array(
-		"type"     => "stdout",
-		"format"   => "[{datetime}] [{level}] {message}",
-	),
-	array(
-		"type"     => "mail",
-		"to"       => "webmaster@localhost",
-		"subject"  => "sugi logger message",
-		"from"     => "web@localhost",
-		"filter"   => "none +emergency"
-	),
-
-);
+return [
+    // "path"       => "/var/log/",
+    // "prefix"     => "app-",
+    // "extension"  => "log",
+    // "level"      => "debug",
+    // "dateFormat" => "[Y-m-d H:i:s]",
+];

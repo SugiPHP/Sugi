@@ -1,7 +1,8 @@
 {
     "name": "sugiphp/sugi",
     "type": "library",
-    "description": "SugiPHP Component Bundle",
+    "description": "SugiPHP Micro Framework",
+    "keywords": ["framework", "psr-1", "psr-2", "psr-3", "psr-4", "psr-7"],
     "license": "MIT",
     "authors": [
         {
@@ -11,22 +12,15 @@
     ],
     "require": {
         "php": ">=5.4",
-        "sugiphp/cache": "~1.0",
-        "sugiphp/config": "~1.0",
+        "psr/log": "~1.0",
+        "psr/http-message": "~1.0",
         "sugiphp/container": "~1.0",
-        "sugiphp/database": "~1.0",
+        "sugiphp/config": "~1.0",
         "sugiphp/events": "~1.0",
-        "sugiphp/filter": "~1.0",
-        "sugiphp/http": "~1.0",
-        "sugiphp/logger": "~1.0",
-        "sugiphp/routing": "0.2",
-        "sugiphp/assets": "dev-master",
-        "natxet/cssmin": "dev-master",
-        "sugiphp/filesystem": "dev-master",
-        "sugiphp/cron": "dev-master",
-        "symfony/yaml": "~2.2",
-        "leafo/lessphp": "~0.3",
-        "swiftmailer/swiftmailer": "~4.3"
+        "sugiphp/cache": "~1.0",
+        "phly/http": "~1.0@dev",
+        "aura/router": "3.*@dev",
+        "katzgrau/klogger": "dev-master"
     },
     "autoload": {
         "psr-4": {
