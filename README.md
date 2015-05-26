@@ -1,6 +1,6 @@
 ## Sugi ##
 
-The second version of Sugi is using a different approach. It is a micro framework using SugiPHP Components as well as some other components.
+Sugi is a micro framework using SugiPHP Components as well as some other components. It works as a Dependency Injection Container and it is very flexible.
 
 ### Hello World! example ###
 
@@ -17,7 +17,7 @@ $app->run();
 ### Installation ###
 
 ```cli
-composer require sugiphp/sugi
+composer require sugiphp/sugi:dev-master
 ```
 
 
