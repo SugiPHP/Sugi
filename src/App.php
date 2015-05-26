@@ -8,7 +8,7 @@
 namespace SugiPHP\Sugi;
 
 use SugiPHP\Container\Container;
-use Phly\Http\ServerRequestFactory;
+use Zend\Diactoros\ServerRequestFactory;
 
 class App extends Container
 {
