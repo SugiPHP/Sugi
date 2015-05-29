@@ -741,16 +741,16 @@
         },
         {
             "name": "sugiphp/routing",
-            "version": "0.2",
+            "version": "0.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SugiPHP/Routing.git",
-                "reference": "23f91628a0f15702784f1ef1a6dd2f12647e03fe"
+                "reference": "3278bcdbc47473065c8a126c51fc10979b94383e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SugiPHP/Routing/zipball/23f91628a0f15702784f1ef1a6dd2f12647e03fe",
-                "reference": "23f91628a0f15702784f1ef1a6dd2f12647e03fe",
+                "url": "https://api.github.com/repos/SugiPHP/Routing/zipball/3278bcdbc47473065c8a126c51fc10979b94383e",
+                "reference": "3278bcdbc47473065c8a126c51fc10979b94383e",
                 "shasum": ""
             },
             "require": {
@@ -772,11 +772,8 @@
                     "email": "tzappa@gmail.com"
                 }
             ],
-            "description": "Routing",
-            "keywords": [
-                "route"
-            ],
-            "time": "2015-03-23 14:22:22"
+            "description": "Router (Discontinued)",
+            "time": "2015-05-29 13:08:42"
         },
         {
             "name": "swiftmailer/swiftmailer",

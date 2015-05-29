@@ -1,5 +1,12 @@
-Sugi v.1
-========
+# Sugi v.1
+
+## Installation
+
+```
+composer require sugiphp/sugi 1.*@dev
+```
+
+## About
 
 The Sugi package is intended to make use of SugiPHP components and some 
 other third party libraries a lot easier. This is done by making a 
