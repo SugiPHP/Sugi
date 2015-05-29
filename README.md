@@ -1,10 +1,10 @@
-## Sugi ##
+# Sugi
 
 [![Build Status](https://travis-ci.org/SugiPHP/Sugi.svg)](https://travis-ci.org/SugiPHP/Sugi)
 
 Sugi is a micro framework using SugiPHP Components as well as some other components. It works as a Dependency Injection Container and it is very flexible.
 
-### Hello World! example ###
+## Hello World! example
 
 ```php
 <?php
@@ -16,14 +16,15 @@ $app->run();
 ?>
 ```
 
-### Installation ###
+## Installation
 
 ```cli
 composer require sugiphp/sugi:dev-master
 ```
 
+## Usage
 
-## Sugi App ###
+### Defined paths
 
 ```php
 <?php
@@ -54,7 +55,7 @@ The App is using [SugiPHP\Logger](https://github.com/SugiPHP/Logger/tree/v2.x) b
 ```
 
 
-### PSR-7 requests
+### PSR-7 Requests
 
 The App is PSR-7 compatible and is using [zendframework/zend-diactoros](https://github.com/zendframework/zend-diactoros) internally. You can plug any other PSR-7 compatible library for ServerRequest (instance of \Psr\Http\Message\ServerRequestInterface.)
 
