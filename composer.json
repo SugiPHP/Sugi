@@ -18,9 +18,9 @@
         "sugiphp/config": "~1.0",
         "sugiphp/events": "~1.0",
         "sugiphp/cache": "~1.0",
+        "sugiphp/logger": "~2.@dev",
         "zendframework/zend-diactoros": "~1.0",
-        "aura/router": "3.*@dev",
-        "katzgrau/klogger": "dev-master"
+        "aura/router": "3.*@dev"
     },
     "autoload": {
         "psr-4": {

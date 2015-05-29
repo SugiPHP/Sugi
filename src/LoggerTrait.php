@@ -7,8 +7,7 @@
 
 namespace SugiPHP\Sugi;
 
-use Psr\Log\LogLevel;
-use Katzgrau\KLogger\Logger;
+use SugiPHP\Logger\Logger;
 
 trait LoggerTrait
 {
@@ -25,15 +24,16 @@ trait LoggerTrait
 
     protected function prepareLogger(array $config = [])
     {
-        if (!isset($config["path"])) {
-            $path = $this["log_path"];
+        if (!isset($config["level"])) {
+            $config["level"] = $this["debug"] ? "debug" : "info";
         }
-        if (empty($config["level"])) {
-            $level = $this["debug"] ? LogLevel::DEBUG : LogLevel::INFO;
+        if (!isset($config["filename"])) {
+            if ($host = $this["uri"]->getHost()) {
+                $host .= "-";
+            }
+            $config["filename"] = $this["log_path"].$host.date("Y-m-d").".log";
         }
-        unset($config["path"], $config["level"]);
-        $params = array_merge(["extension" => "log"], $config);
 
-        return new Logger($path, $level, $params);
+        return new Logger($config);
     }
 }

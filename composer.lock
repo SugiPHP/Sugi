@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4b8dd5793c277629d20faf62a8a7d77e",
+    "hash": "6d79aae2a9863dfcca2b85fc14befa88",
     "packages": [
         {
             "name": "aura/router",
@@ -53,56 +53,6 @@
                 "routing"
             ],
             "time": "2015-05-25 14:56:55"
-        },
-        {
-            "name": "katzgrau/klogger",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/katzgrau/KLogger.git",
-                "reference": "609527e67b455aa17cdb4e869fb6d04c84c35814"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/katzgrau/KLogger/zipball/609527e67b455aa17cdb4e869fb6d04c84c35814",
-                "reference": "609527e67b455aa17cdb4e869fb6d04c84c35814",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3",
-                "psr/log": "1.0.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "4.0.*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Katzgrau\\KLogger\\": "src/"
-                },
-                "classmap": [
-                    "src/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Kenny Katzgrau",
-                    "email": "katzgrau@gmail.com"
-                },
-                {
-                    "name": "Dan Horrigan",
-                    "email": "dan@dhorrigan.com"
-                }
-            ],
-            "description": "A Simple Logging Class",
-            "keywords": [
-                "logging"
-            ],
-            "time": "2015-04-14 14:38:19"
         },
         {
             "name": "psr/http-message",
@@ -365,17 +315,56 @@
             "time": "2014-12-16 13:21:04"
         },
         {
-            "name": "zendframework/zend-diactoros",
-            "version": "1.0.0",
+            "name": "sugiphp/logger",
+            "version": "2.x-dev",
             "source": {
                 "type": "git",
-                "url": "https://github.com/zendframework/zend-diactoros.git",
-                "reference": "9fd285ecc32edfa015dd7cc91e18f6c1c07618a7"
+                "url": "https://github.com/SugiPHP/Logger.git",
+                "reference": "d80de141d1c6c68e208ffefb2296f08e5e9cf02c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-diactoros/zipball/9fd285ecc32edfa015dd7cc91e18f6c1c07618a7",
-                "reference": "9fd285ecc32edfa015dd7cc91e18f6c1c07618a7",
+                "url": "https://api.github.com/repos/SugiPHP/Logger/zipball/d80de141d1c6c68e208ffefb2296f08e5e9cf02c",
+                "reference": "d80de141d1c6c68e208ffefb2296f08e5e9cf02c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3",
+                "psr/log": "~1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SugiPHP\\Logger\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Plamen Popov",
+                    "email": "tzappa@gmail.com"
+                }
+            ],
+            "keywords": [
+                "file logger"
+            ],
+            "time": "2015-05-29 06:41:58"
+        },
+        {
+            "name": "zendframework/zend-diactoros",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zend-diactoros.git",
+                "reference": "be067c409377671b8268236443d993374e1987fa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zend-diactoros/zipball/be067c409377671b8268236443d993374e1987fa",
+                "reference": "be067c409377671b8268236443d993374e1987fa",
                 "shasum": ""
             },
             "require": {
@@ -412,20 +401,20 @@
                 "psr",
                 "psr-7"
             ],
-            "time": "2015-05-21 16:37:54"
+            "time": "2015-05-26 17:14:45"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "aura/router": 20,
-        "katzgrau/klogger": 20
+        "sugiphp/logger": 20,
+        "aura/router": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=5.4"
+        "php": ">=5.5"
     },
     "platform-dev": []
 }

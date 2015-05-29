@@ -22,4 +22,17 @@ class AppTest extends PHPUnit_Framework_TestCase
         $sameApp = App::getInstance();
         $this->assertSame($sameApp, $app);
     }
+
+    public function testLogger()
+    {
+        $app = new App();
+        // check default settings
+        $this->assertSame($app["log_path"].date("Y-m-d").".log", $app["logger"]->getFilename());
+        $this->assertSame($app["debug"] ? "debug" : "info", $app["logger"]->getLevel());
+        // changing logger settings
+        $app["logger"]->setFilename("");
+        $this->assertSame("", $app["logger"]->getFilename());
+        $app["logger"]->setLevel("error");
+        $this->assertSame("error", $app["logger"]->getLevel());
+    }
 }
