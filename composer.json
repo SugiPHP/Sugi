@@ -19,7 +19,7 @@
         "sugiphp/filter": "~1.0",
         "sugiphp/http": "~1.0",
         "sugiphp/logger": "~1.0",
-        "sugiphp/routing": "0.2",
+        "sugiphp/routing": "~0.2",
         "sugiphp/assets": "dev-master",
         "natxet/cssmin": "dev-master",
         "sugiphp/filesystem": "dev-master",
