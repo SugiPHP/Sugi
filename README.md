@@ -19,8 +19,8 @@ custom methods of events, hooks and callback mechanisms.
 This sounds pretty good to be TRUE, right? Well, there are some cons 
 in this approach along with pros.
 
-Advantages
-----------
+### Advantages
+
 - All components and libraries are used statically and as a singletons.
 - No need to create anything explicitly. Just use it.
 - Components are not automatically loaded in your project until their first use.
@@ -30,8 +30,8 @@ files, all share same logic and can be found in a single place.
 you can still use a friendly factory method with a config file you specify. 
 Note however that there are some facades which has no factory methods.
 
-Disadvantages
--------------
+### Disadvantages
+
 - Some of the more complex options (and thus not often used ones) might not 
 be available from the facade.
 - Some of those complex options can be accessed but with some added complexity.
@@ -39,8 +39,8 @@ be available from the facade.
 Examples include, but not limited to, some [Monolog](https://github.com/Seldaek/monolog) 
 handlers if you use non standard log levels in your projects.
 
-Conclusion
-----------
+### Conclusion
+
 For most of the projects (at least not very complex ones) there are no need
 to handle more that one database, caching is done with either APC, Memcached 
 or in a file and there is only one mailing transport. This means that there 
