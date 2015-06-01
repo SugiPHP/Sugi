@@ -16,10 +16,11 @@ trait LoggerTrait
      *
      * @param mixed $level
      * @param string $message
+     * @param array $context
      */
-    public function log($level, $message)
+    public function log($level, $message, array $context = [])
     {
-        return $this["logger"]->log($level, $message);
+        return $this["logger"]->log($level, $message, $context);
     }
 
     protected function prepareLogger(array $config = [])
