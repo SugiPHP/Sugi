@@ -8,6 +8,7 @@
 namespace SugiPHP\Sugi;
 
 use SugiPHP\Cache\Cache;
+use SugiPHP\Cache\ArrayStore;
 use SugiPHP\Cache\ApcStore;
 use SugiPHP\Cache\FileStore;
 use SugiPHP\Cache\MemcacheStore;
@@ -49,34 +50,38 @@ trait CacheTrait
      */
     protected function prepareCache($config = [])
     {
-        $store = empty($config["store"]) ? "null" : $config["store"];
+        // check store type - use ArrayStore as default
+        $store = isset($config["store"]) ? $config["store"] : "array";
+        unset($config["store"]);
+        // check we want keys prefix
+        $prefix = isset($config["prefix"]) ? $config["prefix"] : $this["uri"]->getHost();
+        unset($config["prefix"]);
 
         // if we've passed custom Store instance
         if (!is_string($store)) {
             $storeInterface = $store;
         } else {
-            $storeConfig = isset($config[$store]) ? $config[$store] : array();
             if ($store == "memcached") {
-                $storeInterface = MemcachedStore::factory($storeConfig);
+                $storeInterface = MemcachedStore::factory($config);
             } elseif ($store == "memcache") {
-                $storeInterface = MemcacheStore::factory($storeConfig);
+                $storeInterface = MemcacheStore::factory($config);
             } elseif ($store == "apc") {
-                $storeInterface = new ApcStore($storeConfig);
+                $storeInterface = new ApcStore($config);
             } elseif ($store == "file") {
-                $storeInterface = new FileStore($storeConfig["path"]);
-            } elseif ($store == "null") {
-                $storeInterface = new NullStore();
+                $path = isset($config["path"]) ? $config["path"] : $this["temp_path"];
+                $storeInterface = new FileStore();
+            } elseif ($store == "array") {
+                $storeInterface = new ArrayStore();
             } else {
-                throw new \Exception("Unknown Cache Store $store");
+                // If there is no match, or "null" is specified -> use NullStore. No cache is done!
+                $storeInterface = new NullStore();
             }
         }
 
         // creating new SugiPHP\Cache instance
         $cache = new Cache($storeInterface);
-        // check we want keys prefix
-        if (!empty($config["prefix"])) {
-            $cache->setPrefix($config["prefix"]);
-        }
+        // setting prefix
+        $cache->setPrefix($prefix);
 
         return $cache;
     }

@@ -104,9 +104,9 @@ class App extends Container
         });
 
         // Caching
-        $this["cache"] = function () {
+        $this->conditionalSet("cache", function () {
             return $this->prepareCache((array) $this->config("cache"));
-        };
+        });
 
         //  Are we on development or on production server
         $this->conditionalSet("mode", function () {

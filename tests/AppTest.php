@@ -35,4 +35,30 @@ class AppTest extends PHPUnit_Framework_TestCase
         $app["logger"]->setLevel("error");
         $this->assertSame("error", $app["logger"]->getLevel());
     }
+
+    public function testDefaultCache()
+    {
+        $app = new App();
+        // int
+        $app->cache("one", 1);
+        $this->assertSame(1, $app->cache("one"));
+        // array
+        $app->cache("arr", ["foo" => "bar"]);
+        $this->assertSame(["foo" => "bar"], $app->cache("arr"));
+        // no value
+        $this->assertNull($app->cache("two"));
+    }
+
+    public function testNullCache()
+    {
+        $app = new App(["cache" => new \SugiPHP\Cache\Cache(new \SugiPHP\Cache\NullStore())]);
+        $app->cache("one", 1);
+        // no value is actually stored
+        $this->assertNull($app->cache("one"));
+        $app->cache("arr", ["foo" => "bar"]);
+        // no value is actually stored
+        $this->assertNull($app->cache("arr"));
+        // no value
+        $this->assertNull($app->cache("two"));
+    }
 }

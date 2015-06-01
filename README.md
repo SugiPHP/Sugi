@@ -92,3 +92,31 @@ echo $app["uri"]->getPath(); // "/foo"
 
 ?>
 ```
+
+### Cache
+
+The default cache is a virtual cache that is only available till the end of the script. All values can be set and get with one method `cache()`
+
+```php
+<?php
+
+$app->cache("key", "value");
+echo $app->cache("key"); // returns "value"
+
+// to access all methods for the cache you can use:
+$app["cache"]->has("key"); // returns TRUE
+
+?>
+```
+
+By default Sugi is using [SugiPHP Cache](https://github.com/SugiPHP/Cache). To set up Sugi to use memcached server you can use a configuration file `/path/to/config/cache.php`:
+```
+return [
+    "store" => "memcached",
+    "host" => "127.0.0.1",
+    "port" => 11211, 
+    "prefix" => "myprefix",
+]
+```
+
+See config file [example](https://github.com/SugiPHP/Sugi/blob/master/example/app/config/cache.php)
