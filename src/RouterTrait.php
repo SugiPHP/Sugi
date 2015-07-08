@@ -54,7 +54,7 @@ trait RouterTrait
                 $this["request"] = $this["request"]->withAttribute($key, $val);
             }
             $callable = $route->handler;
-            $callable($this["request"]);
+            $callable($this["request"], $route);
 
             return true;
         }
