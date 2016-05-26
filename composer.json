@@ -14,17 +14,19 @@
         "php": ">=5.5",
         "psr/log": "~1.0",
         "psr/http-message": "~1.0",
-        "sugiphp/container": "~1.0",
+        "sugiphp/container": "~1.1",
         "sugiphp/config": "~1.0",
         "sugiphp/events": "~1.0",
         "sugiphp/cache": "~1.0",
         "sugiphp/logger": "~2.@dev",
         "zendframework/zend-diactoros": "~1.0",
-        "aura/router": "3.*@dev"
+        "aura/router": "~3.0"
     },
     "autoload": {
         "psr-4": {
             "SugiPHP\\Sugi\\": "src/"
         }
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
