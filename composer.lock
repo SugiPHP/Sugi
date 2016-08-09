@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "225744b4cb0170690ee606e7302e590e",
-    "content-hash": "21fb61e8699a57593a2d9b21a9948751",
+    "hash": "a2d04720ed2a0b98ef3ca9f5221e7e5f",
+    "content-hash": "8e6cbaa6a9a255f02b51f337dad997b5",
     "packages": [
         {
             "name": "aura/router",
@@ -57,16 +57,16 @@
         },
         {
             "name": "psr/http-message",
-            "version": "1.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/http-message.git",
-                "reference": "85d63699f0dbedb190bbd4b0d2b9dc707ea4c298"
+                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/http-message/zipball/85d63699f0dbedb190bbd4b0d2b9dc707ea4c298",
-                "reference": "85d63699f0dbedb190bbd4b0d2b9dc707ea4c298",
+                "url": "https://api.github.com/repos/php-fig/http-message/zipball/f6561bf28d520154e4b0ec72be95418abe6d9363",
+                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363",
                 "shasum": ""
             },
             "require": {
@@ -94,6 +94,7 @@
                 }
             ],
             "description": "Common interface for HTTP messages",
+            "homepage": "https://github.com/php-fig/http-message",
             "keywords": [
                 "http",
                 "http-message",
@@ -102,7 +103,7 @@
                 "request",
                 "response"
             ],
-            "time": "2015-05-04 20:22:00"
+            "time": "2016-08-06 14:39:51"
         },
         {
             "name": "psr/log",
@@ -144,16 +145,16 @@
         },
         {
             "name": "sugiphp/cache",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SugiPHP/Cache.git",
-                "reference": "754763be54863cf19091088dfb35bd82ff323269"
+                "reference": "1090221e3908cf6323c159a9fe2a810a7f86eff4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SugiPHP/Cache/zipball/754763be54863cf19091088dfb35bd82ff323269",
-                "reference": "754763be54863cf19091088dfb35bd82ff323269",
+                "url": "https://api.github.com/repos/SugiPHP/Cache/zipball/1090221e3908cf6323c159a9fe2a810a7f86eff4",
+                "reference": "1090221e3908cf6323c159a9fe2a810a7f86eff4",
                 "shasum": ""
             },
             "require": {
@@ -180,9 +181,9 @@
                 "apc",
                 "cache",
                 "memcache",
-                "sugiphp"
+                "memcached"
             ],
-            "time": "2014-12-16 09:46:39"
+            "time": "2016-08-09 07:23:04"
         },
         {
             "name": "sugiphp/config",
@@ -415,7 +416,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=5.5"
+        "php": ">=5.6"
     },
     "platform-dev": []
 }

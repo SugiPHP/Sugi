@@ -10,6 +10,7 @@ namespace SugiPHP\Sugi;
 use SugiPHP\Cache\Cache;
 use SugiPHP\Cache\ArrayStore;
 use SugiPHP\Cache\ApcStore;
+use SugiPHP\Cache\ApcuStore;
 use SugiPHP\Cache\FileStore;
 use SugiPHP\Cache\MemcacheStore;
 use SugiPHP\Cache\MemcachedStore;
@@ -65,6 +66,8 @@ trait CacheTrait
                 $storeInterface = MemcachedStore::factory($config);
             } elseif ($store == "memcache") {
                 $storeInterface = MemcacheStore::factory($config);
+            } elseif ($store == "apcu") {
+                $storeInterface = new ApcuStore($config);
             } elseif ($store == "apc") {
                 $storeInterface = new ApcStore($config);
             } elseif ($store == "file") {
